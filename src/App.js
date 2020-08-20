@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 import 'antd/dist/antd.css';
-import { HashRouter, Route, Router, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import { JsonBoxProvider } from "react-jsonbox";
 import { createBrowserHistory } from "history";
-import { Home, AboutUs, Education } from './pages'
+import { Home, AboutUs, Education, Contact, Notice } from './pages'
 import { Header } from './components/Header'
 import { Menu } from './components/Menu'
 import { Footer } from './components/Footer'
@@ -40,6 +40,20 @@ function App() {
               path="/ensino"
               component={(props) => (
                 <Education history={history} {...props}></Education>
+              )}
+            />
+            <Route
+              exact={false}
+              path="/fale-conosco"
+              component={(props) => (
+                <Contact history={history} {...props}></Contact>
+              )}
+            />
+            <Route
+              exact={false}
+              path="/fake-post"
+              component={(props) => (
+                <Notice history={history} {...props}></Notice>
               )}
             />
           </Switch>

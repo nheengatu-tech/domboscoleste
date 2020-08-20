@@ -39,7 +39,7 @@ const Menu = (props) => {
             DOWNLOADS
           </NavItem> */}
           <NavItem>
-            FALE CONOSCO
+            <Link to="/fale-conosco">FALE CONOSCO</Link>
           </NavItem>
         </div>
       </Container>
