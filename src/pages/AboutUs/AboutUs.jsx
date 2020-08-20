@@ -3,7 +3,6 @@ import { TitleContainer } from './styles'
 import shadLista from '../../images/shad-lista.png'
 
 const AboutUs = () => {
-  console.log("ABOUTUS");
   return(
     <div>
       <TitleContainer>

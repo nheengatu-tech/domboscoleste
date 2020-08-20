@@ -6,7 +6,6 @@ import { Partners } from '../../components/Partners'
 import { InstagramFeed } from '../../components/InstagramFeed'
 
 const Home = (props) => {
-  console.log("HOME");
   return (
     <div>
       <CarouselList />
