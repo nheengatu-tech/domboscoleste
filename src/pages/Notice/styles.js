@@ -29,3 +29,17 @@ export const TitleContainer = styled.div`
     bottom: -15%;
   }
 `
+
+export const SocialMedia = styled.span`
+  display: flex;
+  margin: auto 2px;
+  border: solid 2px #777;
+  border-radius: 50%;
+  padding: 4px;
+  
+  &:hover {
+    cursor: pointer;
+    color: rgb(12,51,159);
+    border: solid 2px rgb(12,51,159);
+  }
+`
