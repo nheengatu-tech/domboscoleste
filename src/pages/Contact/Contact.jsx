@@ -37,8 +37,9 @@ const Contact = () => {
         }}>
           Entre em contato e venha fazer parte da nossa história
         </h4> */}
+        {/* <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScp9yr-FRldZS-PHGVZ0wutSfBduEghmAJTJX49Ivon8w49-Q/viewform?embedded=true" width="640" height="1149" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe> */}
         <div>
-        <iframe title="form" src="https://docs.google.com/forms/d/e/1FAIpQLSfSI2FSW_85WqFss0a3dB-kogV2SiCV6cotcQl5WAX0IO805w/viewform?embedded=true" width={widthScreen} height="1225" frameborder="0" marginheight="0" marginwidth="0">Carregando...</iframe>
+        <iframe title="form" src="https://docs.google.com/forms/d/e/1FAIpQLScp9yr-FRldZS-PHGVZ0wutSfBduEghmAJTJX49Ivon8w49-Q/viewform?embedded=true" width={widthScreen} height="1225" frameborder="0" marginheight="0" marginwidth="0">Carregando...</iframe>
         </div>
       </BodyNotice>
     </div>

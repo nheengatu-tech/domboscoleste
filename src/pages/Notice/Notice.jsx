@@ -18,7 +18,6 @@ const Notice = (props) => {
   const fetchNotices = async() => {
     const { data } = await read("posts")
     data.map((notice) => {
-      // console.log(notice.title === urlTitle);
       console.log(notice);
       if (notice.title === urlTitle) {
         setNotice(notice)

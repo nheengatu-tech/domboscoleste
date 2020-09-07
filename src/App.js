@@ -8,6 +8,7 @@ import { Login, User, Home, AboutUs, Education, Contact, Notice, Post } from './
 import { Header } from './components/Header'
 import { Menu } from './components/Menu'
 import { Footer } from './components/Footer'
+import { WIPNotice } from './pages/WIPNotice'
 
 const history = createBrowserHistory();
 
@@ -45,6 +46,19 @@ function App() {
                 </>
               )}
             />
+            <Route
+              exact={true}
+              path={'/noticias/edital-bolsas-2021-cdbl'}
+              component={(props) => (
+                <>
+                  <Header/>
+                  <Menu history={history} />
+                  <WIPNotice history={history} {...props}></WIPNotice>
+                  <Footer/>
+                </>
+              )}
+            />
+            
             <Route
               exact={false}
               path={'/noticias/:title'}

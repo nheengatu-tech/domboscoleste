@@ -8,6 +8,7 @@ import {
 } from './styles'
 import { RiAddCircleLine } from 'react-icons/ri'
 import hotnews1 from '../../images/hotnews1.jpg'
+import editalBolsa from '../../images/edital-bolsa-2011.jpeg'
 
 
 const HotNews = () => {
@@ -54,7 +55,7 @@ const HotNews = () => {
             fontSize: "12px",
             textAlign: "start"
           }}>
-            31/07/2020
+            04/09/2020
           </span>
           <h5
             style={{
@@ -65,14 +66,14 @@ const HotNews = () => {
               lineHeight: "initial"
             }}
           >
-            Alunos salesianos criam perfil com dicas de estudos para ajudar colegas de turma
+            O Colégio Dom Bosco Leste anuncia o Edital de Bolsas 2021.
           </h5>
           <ImgNews>
             <img style={{
               maxWidth: "100%",
               height: "auto"
             }}
-            src={hotnews1} alt={"hot news"}/>
+            src={editalBolsa} alt={"hot news"}/>
           </ImgNews>
           <p
             style={{
@@ -82,9 +83,11 @@ const HotNews = () => {
               textAlign: "justify"
             }}
           >
-          "A ideia que nos motiva é ajudar o outro. No começo, fiquei preocupado se teria tempo para conciliar minhas tarefas, mas o Studenthink vem me ajudando com os estudos"                                
+          Realize sua inscrição e encontre a bolsa de estudo que sempre desejou!                                
           </p>
-          <Button style={{ margin: "auto 0", textTransform: "initial" }}>Leia mais</Button>
+          <Button
+          onClick={() => window.open('#/noticias/edital-bolsas-2021-cdbl')}
+          style={{ margin: "auto 0", textTransform: "initial" }}>Leia mais</Button>
         </div>
         {/* <div style={{
           display: "flex",
