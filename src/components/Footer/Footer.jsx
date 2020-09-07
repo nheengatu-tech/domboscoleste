@@ -2,25 +2,19 @@ import React from 'react'
 import {
   Container,
   Item,
-  PlaylistItem
+  PlaylistItem,
+  YellonContainer,
+  Component,
+  ComponentItem
 } from './styles'
-// import logoFooter from '../../images/logo-footer.png'
 import logoFooter from '../../images/logo-landing.png'
 
 const Footer = () => {
   return(
+    <>
     <Container>
-      <div style={{
-        display: "flex",
-        width: "80%",
-        margin: "auto"
-      }}>
-        <div style={{
-          display: "flex",
-          flexDirection: "column",
-          textAlign: "justify",
-          marginRight: "64px"
-        }}>
+      <Component>
+        <ComponentItem>
           <h4 style={{
             fontFamily: 'Titillium Web, sans-serif',
             color: 'white',
@@ -34,13 +28,8 @@ const Footer = () => {
           <Item href="/sobrenos">Notícias</Item>
           <Item href="/sobrenos">Ensino</Item>
           <Item href="/sobrenos">Fale Conosco</Item>
-        </div>
-        <div style={{
-          display: "flex",
-          flexDirection: "column",
-          textAlign: "left",
-          marginRight: "64px"
-        }}>
+        </ComponentItem>
+        <ComponentItem>
           <h4 style={{
             fontFamily: 'Titillium Web, sans-serif',
             color: 'white',
@@ -59,13 +48,8 @@ const Footer = () => {
           <p style={{ marginBottom: 0}}>
           Manaus - AM, 69083-000
           </p>
-        </div>
-        <div style={{
-          display: "flex",
-          flexDirection: "column",
-          textAlign: "left",
-          marginRight: "64px"
-        }}>
+        </ComponentItem>
+        <ComponentItem>
           <h4 style={{
             fontFamily: 'Titillium Web, sans-serif',
             color: 'white',
@@ -81,8 +65,8 @@ const Footer = () => {
           <p style={{ marginBottom: 0}}>
           (92) 98188-0085 (WhatsApp)
           </p>
-        </div>
-        <div style={{
+        </ComponentItem>
+        <ComponentItem style={{
           display: "flex",
           flexDirection: "column",
           textAlign: "justify",
@@ -97,12 +81,12 @@ const Footer = () => {
           }}>
             Acesse também
           </h4>
-          <Item target="blank" href="https://www.edebe.com/">Editora Edebe</Item>
+          <Item target="blank" href="https://www.edebe.com.br/">Editora Edebe</Item>
           <Item target="blank" href="https://www.rsb.org.br/">Rede Salesiana</Item>
           <Item target="blank" href="https://isma.org.br/">ISMA</Item>
           <Item target="blank" href="https://www.boletimsalesiano.org.br/">Boletim Salesiano</Item>
-        </div>
-        <div style={{
+        </ComponentItem>
+        <ComponentItem style={{
           display: "flex",
           margin: "auto",
           flexDirection: "column"
@@ -117,22 +101,18 @@ const Footer = () => {
           <PlaylistItem>
             Entusiamo diante da vida!
           </PlaylistItem>
-      <span style={{
-        font: '13px Titillium Web, sans-serif',
-        color: 'white',
-        textAlign: "center"
-      }}>
-        Desenvolvido com ❤︎ por 
-        <br/>
-        <Item
-          href="https://yellonpublicidade.com.br"
-          target="blank">
-          Yellon Publicidade
-        </Item>
-      </span>
-        </div>
-      </div>
+        </ComponentItem>
+      </Component>
     </Container>
+    <YellonContainer>
+      Desenvolvido com ❤︎ por 
+      <Item
+        href="https://yellonpublicidade.com.br"
+        target="blank">
+        Yellon Publicidade
+      </Item>
+    </YellonContainer>
+  </>
   )
 }
 

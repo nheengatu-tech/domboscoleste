@@ -1,49 +1,21 @@
 import React from 'react'
-import { Link } from "react-router-dom";
 import {
-  Container,
-  NavItem
+  DesktopViewport,
+  MobileViewport,
 } from './styles'
-import cdbLogo from '../../images/logo-cdbl.png'
+import { MenuMobile } from './MenuMobile'
+import { MenuDesktop } from './MenuDesktop'
 
 const Menu = (props) => {
   return(
-    <div style={{
-      display: "flex",
-      margin: "auto",
-      justifyContent: "center"
-    }}>
-      <img
-        style={{ maxWidth: "150px" }}
-        src={cdbLogo}
-        alt={"Logotipo Colégio Dom Bosco Leste"}
-      />
-      <Container>
-        <div style={{ margin: "auto", display: "flex" }}>
-          <NavItem>
-            <Link to="/">INICIO</Link>
-          </NavItem>
-          <NavItem>
-            <Link to="/institucional">NOSSA ESCOLA</Link>
-          </NavItem>
-          <NavItem>
-            NOTICIAS
-          </NavItem>
-          <NavItem>
-            <Link to="/ensino">ENSINO</Link>
-          </NavItem>
-          {/* <NavItem>
-            PROJETOS
-          </NavItem>
-          <NavItem>
-            DOWNLOADS
-          </NavItem> */}
-          <NavItem>
-            <Link to="/fale-conosco">FALE CONOSCO</Link>
-          </NavItem>
-        </div>
-      </Container>
-    </div>
+    <>
+      <DesktopViewport>
+        <MenuDesktop/>
+      </DesktopViewport>
+      <MobileViewport>
+        <MenuMobile/>
+      </MobileViewport>
+    </>
   )
 }
 

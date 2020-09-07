@@ -1,4 +1,29 @@
 import styled from 'styled-components'
+import { tablet } from '../../_breakpoints'
+
+export const Grid = styled.div`
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  
+  @media (min-width: ${tablet}) {
+    flex-direction: row;
+  }
+`
+  
+export const BodyNotice = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: justify;
+  padding: 24px;
+  
+  @media (min-width: ${tablet}) {
+    width: 70%;
+    padding: 48px;
+  }
+`
 
 export const TitleContainer = styled.div`
   display: flex;

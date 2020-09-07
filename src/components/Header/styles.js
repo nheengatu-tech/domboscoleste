@@ -1,6 +1,10 @@
 import styled from 'styled-components'
+import { mobile } from '../../_breakpoints'
 
 const Container = styled.div`
+  @media (max-width: ${mobile}) {
+    display: none;
+  }
   background: #F2F2F2;
   height: 38px;
   display: flex;

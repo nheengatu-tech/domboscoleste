@@ -1,5 +1,11 @@
 import React from 'react'
-import { PartnerImg, MaterialContainer, MaterialImg } from './styles'
+import {
+  PartnersContainer,
+  PartnerImg,
+  Grid,
+  MaterialContainer,
+  MaterialImg
+} from './styles'
 import edebe from '../../images/edebe.png'
 import boletimSalesiano from '../../images/boletim-sa.png'
 import isma from '../../images/isma.jpg'
@@ -12,14 +18,7 @@ import shadProjetos from '../../images/shad-projetos.png'
 const Partners = () => {
  return(
    <div style={{ backgroundColor: "#f8f8f8" }}>
-    <div
-      style={{
-        display: "flex",
-        width: "80%",
-        margin: "16px auto 32px auto",
-        padding: "16px"
-      }}
-    >
+    <Grid>
       <div style={{
         display: "flex",
         flexDirection: "column",
@@ -36,18 +35,16 @@ const Partners = () => {
           >
           Parceria que <strong>Conquista</strong>
         </h3>
-        <div style={{
-          display: "flex",
-          margin: "16px",
-          width: '50%',
-          flexWrap: "wrap",
-          justifyContent: "space-between"
-        }}>
+        <PartnersContainer>
           <div
             style={{
               display: "flex",
               flexBasis: "25%",
             }}
+            onClick={
+              () =>
+              window.open('https://www.edebe.com.br/', '_blank')
+            }
           >
             <PartnerImg
             style={{ borderRadius: "25px" }}
@@ -58,6 +55,10 @@ const Partners = () => {
               display: "flex",
               flexBasis: "25%",
             }}
+            onClick={
+              () =>
+              window.open('https://www.boletimsalesiano.org.br/', '_blank')
+            }
           >
             <PartnerImg
             style={{ borderRadius: "25px" }}
@@ -69,6 +70,10 @@ const Partners = () => {
               display: "flex",
               flexBasis: "25%",
             }}
+            onClick={
+              () =>
+              window.open('https://isma.org.br/', '_blank')
+            }
           >
             <PartnerImg
             style={{ borderRadius: "25px" }}
@@ -79,10 +84,14 @@ const Partners = () => {
               display: "flex",
               flexBasis: "25%",
             }}
+            onClick={
+              () =>
+              window.open('https://escolas.rsb.org.br/Rsb-escola', '_blank')
+            }
           >
             <PartnerImg src={redeSalesiana} alt="partner rsb" />
           </div>
-        </div>
+        </PartnersContainer>
       </div>
       <div>
         <div style={{
@@ -123,7 +132,7 @@ const Partners = () => {
               </span>
             </MaterialContainer>
             <MaterialContainer
-              onClick={() => window.open('https://www.flickr.com/photos/tags/flicker/', '_blank')}
+              onClick={() => window.open('https://www.flickr.com/people/190154461@N08/', '_blank')}
             >
               <MaterialImg src={shadGaleria} />
               <span style={{
@@ -138,7 +147,7 @@ const Partners = () => {
               </span>
             </MaterialContainer>
             <MaterialContainer
-              onClick={() => window.open('https://www.flickr.com/photos/tags/flicker/', '_blank')}
+              onClick={() => window.open('https://facebook.com/colegiodomboscolestemanaus', '_blank')}
             >
               <MaterialImg src={shadProjetos} />
               <span style={{
@@ -153,7 +162,7 @@ const Partners = () => {
               </span>
             </MaterialContainer>
             <MaterialContainer
-              onClick={() => window.open('https://www.flickr.com/photos/tags/flicker/', '_blank')}
+              onClick={() => window.location.href = window.location.origin + '#/institucional'}
             >
               <MaterialImg src={shadIniciativa} />
               <span style={{
@@ -170,7 +179,7 @@ const Partners = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Grid>
   </div>
  ) 
 }

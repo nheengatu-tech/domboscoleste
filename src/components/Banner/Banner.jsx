@@ -1,5 +1,6 @@
 import React from 'react'
 import bannerSection from '../../images/section-bg.png'
+import { Grid, GridItem } from './styles'
 
 const BannerSection = () => {
   return(
@@ -9,18 +10,8 @@ const BannerSection = () => {
       display: "flex",
       margin: "32px auto"
     }}>
-      <div style={{ display: "flex", margin: "auto" }}>
-        <div
-          style={{
-            width: "128px",
-            height: "128px",
-            border: "2px solid #555555",
-            borderRadius: "100%",
-            display: "flex",
-            marginRight: "8px",
-            flexDirection: "column"
-          }}
-          >
+      <Grid>
+        <GridItem>
           <span style={{
             display: "flex",
             margin: 'auto auto 0',
@@ -28,7 +19,7 @@ const BannerSection = () => {
             fontSize: "32px",
             fontWeight: "bolder"
           }}>
-            80
+            73
           </span>
           <span style={{
             display: "flex",
@@ -39,16 +30,9 @@ const BannerSection = () => {
           }}>
               funcionários
           </span>
-        </div>
-        <div
+        </GridItem>
+        <GridItem
           style={{
-            width: "128px",
-            height: "128px",
-            border: "2px solid #555555",
-            borderRadius: "100%",
-            display: "flex",
-            marginRight: "8px",
-            flexDirection: "column",
             backgroundColor: "#555555"
           }}
           >
@@ -59,7 +43,7 @@ const BannerSection = () => {
             fontSize: "32px",
             fontWeight: "bolder"
           }}>
-            +500
+            +450
           </span>
           <span style={{
             display: "flex",
@@ -70,18 +54,8 @@ const BannerSection = () => {
           }}>
               alunos
           </span>
-        </div>
-        <div
-          style={{
-            width: "128px",
-            height: "128px",
-            border: "2px solid #555555",
-            borderRadius: "100%",
-            display: "flex",
-            marginRight: "8px",
-            flexDirection: "column"
-          }}
-          >
+        </GridItem>
+        <GridItem>
           <span style={{
             display: "flex",
             margin: 'auto auto 0',
@@ -89,7 +63,7 @@ const BannerSection = () => {
             fontSize: "32px",
             fontWeight: "bolder"
           }}>
-            37
+            29
           </span>
           <span style={{
             display: "flex",
@@ -100,12 +74,12 @@ const BannerSection = () => {
           }}>
               professores
           </span>
-        </div>
+        </GridItem>
         <div style={{
           display: "flex",
           flexDirection: "column",
-          margin: "auto auto auto 16px",
-          textAlign: "justify"
+          margin: "auto 16px",
+          textAlign: "center"
         }}>
           <h2 style={{ color: "#555", fontWeight: "bolder" }}>
             Escola Salesiana Dom Bosco Leste
@@ -114,7 +88,7 @@ const BannerSection = () => {
             Seja bem-vindo à maior rede de escolas católicas das Américas!
           </p>
         </div>
-      </div>
+      </Grid>
     </div>
   )
 }

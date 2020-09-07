@@ -1,15 +1,48 @@
 import styled from 'styled-components'
+import { mobile, xlaptop } from '../../_breakpoints'
 
 const Container = styled.div`
-  display: flex;
-  margin: 16px auto auto auto;
-  height: 260px;
-  bottom: 0;
-  width: 80%;
-  border-top-right-radius: 150px;
-  border-top-left-radius: 150px;
+  background-image: linear-gradient( to right,rgb(12,51,159) 0%,rgb(0,101,185) 100%);
   color: white;
-  background-image: linear-gradient( to right,rgb(12,51,159) 0%,rgb(0,101,185) 100%)
+  display: flex;
+  // margin: ;
+  padding-top: 16px;
+  bottom: 0;
+  width: 100%;
+
+  @media (min-width: ${mobile}) {
+    margin: 16px auto auto auto;
+    // height: 260px;
+    border-top-right-radius: 150px;
+    border-top-left-radius: 150px;
+  }
+  
+  @media (min-width: ${xlaptop}) {
+    width: 80%;
+  }
+`
+
+const Component = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+
+  @media (min-width: ${mobile}) {
+    flex-direction: row;
+  }
+`
+
+const ComponentItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  margin-right: 64px;
+  margin-bottom: 20px;
+
+  @media (min-width: ${mobile}) {
+    margin-bottom: auto;
+  }
 `
 
 const Item = styled.a`
@@ -17,6 +50,7 @@ const Item = styled.a`
   font-size: 13px;
   color: white;
   transition: all 0.2s linear;
+  margin-left: 4px;
 
   &:hover {
     font-weight: bolder;
@@ -32,4 +66,25 @@ const PlaylistItem = styled.p`
   font-family: 'Playball', cursive;
 `
 
-export { Container, Item, PlaylistItem }
+const YellonContainer = styled.div`
+  font: 13px Titillium Web, sans-serif;
+  color: white;
+  text-align: center;
+  background-image: linear-gradient( to right,rgb(12,51,159) 0%,rgb(0,101,185) 100%);
+  display: flex;
+  margin: auto;
+  justify-content: center;
+
+  @media (min-width: ${xlaptop}) {
+    width: 80%;
+  }
+`
+
+export {
+  ComponentItem, 
+  Component,
+  Container,
+  Item,
+  PlaylistItem,
+  YellonContainer
+}

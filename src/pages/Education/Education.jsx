@@ -1,20 +1,17 @@
 import React from 'react'
-import { TitleContainer } from './styles'
+import { TitleContainer, Grid, BodyNotice } from './styles'
 import shadLista from '../../images/shad-lista.png'
 
 const Education = () => {
   return(
     <div>
       <TitleContainer>
-        <div style={{
-          display: "flex",
-          width: "70%",
-          margin: "auto"
-        }}>
+        <Grid>
             <h3 style={{
               color: "#1c3f95",
               fontSize: "28px",
-              fontFamily: 'Dekar, sans-serif'
+              fontFamily: 'Dekar, sans-serif',
+              fontWeight: 700,
             }}>
               Ensino
             </h3>
@@ -28,16 +25,9 @@ const Education = () => {
               Conheça a nossa Missão!
             </h4>
 
-        </div>
+        </Grid>
       </TitleContainer>
-      <div style={{
-        display: "flex",
-        flexDirection: "column",
-        width: "70%",
-        margin: "auto",
-        textAlign: "justify",
-        padding: "48px"
-      }}>
+      <BodyNotice>
         <h4 style={{
           color: "#333399",
           fontSize: "20px",
@@ -114,7 +104,7 @@ Quem percebe que é amado, tornar-se também capaz de sair de si e amar os outro
           </div>
         </div>
         </div>
-      </div>
+      </BodyNotice>
     </div>
   )
 }
