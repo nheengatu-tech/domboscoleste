@@ -95,7 +95,7 @@ const Footer = () => {
             display: "flex",
             width: "220px",
             maxWidth: "220px",
-            height: "fit-content",
+            height: "auto",
             margin: "auto"
           }}/>
           <PlaylistItem>
