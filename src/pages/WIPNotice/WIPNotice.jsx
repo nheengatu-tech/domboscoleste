@@ -9,6 +9,7 @@ import { GrFacebook, GrLinkedin } from 'react-icons/gr'
 import { FaWhatsappSquare } from 'react-icons/fa'
 import { TitleContainer, Grid, BodyNotice } from './styles'
 import editalBolsa from '../../images/edital-bolsa-2011.jpeg'
+import { Helmet } from "react-helmet";
 
 const WIPNotice = (props) => {
   const widthScreen = window.innerWidth;
@@ -85,10 +86,10 @@ Realize sua inscrição e encontre a bolsa de estudo que sempre desejou!</p>
                 quote={"O Colégio Dom Bosco Leste anuncia o Edital de Bolsas 2021."
                 }
                 url={`https://www.domboscoleste.com.br${window.location.pathname}`}>
-                  <MetaTags>
+                  <Helmet>
                     <meta property="og:title" content="O Colégio Dom Bosco Leste anuncia o Edital de Bolsas 2021."></meta>
                     <meta property="og:image" content={editalBolsa}></meta>
-                  </MetaTags>
+                  </Helmet>
                 <GrFacebook size={"2em"}/> 
               </FacebookShareButton>
               <LinkedinShareButton style={{ color: "#0077b5"}}

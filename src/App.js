@@ -9,18 +9,24 @@ import { Header } from './components/Header'
 import { Menu } from './components/Menu'
 import { Footer } from './components/Footer'
 import { WIPNotice } from './pages/WIPNotice'
-import MetaTags from 'react-meta-tags'
 import logoCdbl from './images/logo-cdbl.png'
+import { Helmet } from "react-helmet";
 
 const history = createBrowserHistory();
 
 function App() {
   return (
     <div className="App">
-      <MetaTags>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <link rel="canonical" href="https://www.domboscoleste.com.br" />
+        <meta
+          name="description"
+          content="Parceria de Sucesso!"
+        />
         <meta property="og:title" content="Colégio Dom Bosco Leste"></meta>
         <meta property="og:image" content={logoCdbl}></meta>
-      </MetaTags>
+      </Helmet>
       <HashRouter basename="/">
         <JsonBoxProvider
             value={{ url: "https://jsonbox.io", id: "box_eab95f446b02b61b6379" }}
