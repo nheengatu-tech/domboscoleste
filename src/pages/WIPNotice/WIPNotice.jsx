@@ -15,6 +15,12 @@ const WIPNotice = (props) => {
   const widthScreen = window.innerWidth;
   return(
     <div>
+      <Helmet>
+        <meta property="og:title" content="O Colégio Dom Bosco Leste anuncia o Edital de Bolsas 2021."></meta>
+        <meta property="og:image" content={editalBolsa}></meta>
+        <meta property="og:image:type" content="image/jpg"></meta>
+        <meta property="og:url" content={window.location.href}></meta>
+      </Helmet>
       <TitleContainer>
         <Grid>
             <h3 style={{
@@ -82,13 +88,14 @@ Realize sua inscrição e encontre a bolsa de estudo que sempre desejou!</p>
                   margin: "4px",
                   color: "#4267b2"
                 }}
-                // children={<img src={editalBolsa}/>}
                 quote={"O Colégio Dom Bosco Leste anuncia o Edital de Bolsas 2021."
                 }
                 url={`https://www.domboscoleste.com.br${window.location.pathname}`}>
                   <Helmet>
                     <meta property="og:title" content="O Colégio Dom Bosco Leste anuncia o Edital de Bolsas 2021."></meta>
                     <meta property="og:image" content={editalBolsa}></meta>
+                    <meta property="og:image:type" content="image/jpg"></meta>
+                    <meta property="og:url" content={window.location.href}></meta>
                   </Helmet>
                 <GrFacebook size={"2em"}/> 
               </FacebookShareButton>
