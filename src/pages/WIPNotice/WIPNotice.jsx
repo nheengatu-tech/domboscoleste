@@ -4,6 +4,7 @@ import {
   LinkedinShareButton,
   WhatsappShareButton
 } from 'react-share'
+import MetaTags from 'react-meta-tags';
 import { GrFacebook, GrLinkedin } from 'react-icons/gr'
 import { FaWhatsappSquare } from 'react-icons/fa'
 import { TitleContainer, Grid, BodyNotice } from './styles'
@@ -58,9 +59,15 @@ const WIPNotice = (props) => {
 Realize sua inscrição e encontre a bolsa de estudo que sempre desejou!</p>
             <div>
               Clique
-              <a href="https://drive.google.com/file/d/1xrTLHP4UKZh5QCGJpU25rOjo1dSEVRtX/view?usp=sharing" target="blank">
+              <a href="https://forms.gennera.com.br/view#/formulario/2723299494235674115">
               {' '} aqui
-              </a> para baixar o Edital 2021
+              </a> para se candidatar à Bolsa 2021
+            </div>
+            <div>
+              Clique
+              <a href="https://drive.google.com/file/d/195XhYXu8epJTxLWBAs5x7AtQUtpbeav9/view?usp=sharing" target="blank">
+              {' '} aqui
+              </a> para baixar o Edital
             </div>
             <div style={{ display: "flex" }}>
               <span style={{
@@ -74,7 +81,14 @@ Realize sua inscrição e encontre a bolsa de estudo que sempre desejou!</p>
                   margin: "4px",
                   color: "#4267b2"
                 }}
-                url={window.location.href}>
+                // children={<img src={editalBolsa}/>}
+                quote={"O Colégio Dom Bosco Leste anuncia o Edital de Bolsas 2021."
+                }
+                url={`https://www.domboscoleste.com.br${window.location.pathname}`}>
+                  <MetaTags>
+                    <meta property="og:title" content="O Colégio Dom Bosco Leste anuncia o Edital de Bolsas 2021."></meta>
+                    <meta property="og:image" content={editalBolsa}></meta>
+                  </MetaTags>
                 <GrFacebook size={"2em"}/> 
               </FacebookShareButton>
               <LinkedinShareButton style={{ color: "#0077b5"}}
@@ -82,7 +96,9 @@ Realize sua inscrição e encontre a bolsa de estudo que sempre desejou!</p>
                 <GrLinkedin size={"2em"}/> 
               </LinkedinShareButton>
               <WhatsappShareButton style={{ color: "#075e54"}}
-              url={window.location.href}>
+              url={window.location.href}
+              title={"O Colégio Dom Bosco Leste anuncia o Edital de Bolsas 2021."}
+              >
                 <FaWhatsappSquare size={"2.5em"}/> 
               </WhatsappShareButton>
             </div>

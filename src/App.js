@@ -9,12 +9,18 @@ import { Header } from './components/Header'
 import { Menu } from './components/Menu'
 import { Footer } from './components/Footer'
 import { WIPNotice } from './pages/WIPNotice'
+import MetaTags from 'react-meta-tags'
+import logoCdbl from './images/logo-cdbl.png'
 
 const history = createBrowserHistory();
 
 function App() {
   return (
     <div className="App">
+      <MetaTags>
+        <meta property="og:title" content="Colégio Dom Bosco Leste"></meta>
+        <meta property="og:image" content={logoCdbl}></meta>
+      </MetaTags>
       <HashRouter basename="/">
         <JsonBoxProvider
             value={{ url: "https://jsonbox.io", id: "box_eab95f446b02b61b6379" }}
