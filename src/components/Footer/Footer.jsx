@@ -60,10 +60,10 @@ const Footer = () => {
             Contato
           </h4>
           <p style={{ marginBottom: 0}}>
-          (92) 2125-1353
+          (92) 3131-4100
           </p>
           <p style={{ marginBottom: 0}}>
-          (92) 98188-0085 (WhatsApp)
+          (92) 99259-9150 (WhatsApp)
           </p>
         </ComponentItem>
         <ComponentItem style={{
