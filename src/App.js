@@ -9,6 +9,7 @@ import { Header } from './components/Header'
 import { Menu } from './components/Menu'
 import { Footer } from './components/Footer'
 import { WIPNotice } from './pages/WIPNotice'
+import { SecNotice } from './pages/SecNotice'
 import logoCdbl from './images/logo-cdbl.png'
 import { Helmet } from "react-helmet";
 
@@ -66,6 +67,18 @@ function App() {
                   <Header/>
                   <Menu history={history} />
                   <WIPNotice history={history} {...props}></WIPNotice>
+                  <Footer/>
+                </>
+              )}
+            />
+            <Route
+              exact={true}
+              path={'/noticias/campanha-matriculas-2021'}
+              component={(props) => (
+                <>
+                  <Header/>
+                  <Menu history={history} />
+                  <SecNotice history={history} {...props}></SecNotice>
                   <Footer/>
                 </>
               )}
