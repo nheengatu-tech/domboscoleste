@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "./static/css/main.dc0a14bb.chunk.css",
-    "main.js": "./static/js/main.186a28a1.chunk.js",
-    "main.js.map": "./static/js/main.186a28a1.chunk.js.map",
+    "main.js": "./static/js/main.3e4cf6e6.chunk.js",
+    "main.js.map": "./static/js/main.3e4cf6e6.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.f486c041.js",
     "runtime-main.js.map": "./static/js/runtime-main.f486c041.js.map",
     "static/css/2.6df4c8f8.chunk.css": "./static/css/2.6df4c8f8.chunk.css",
-    "static/js/2.d3de5d45.chunk.js": "./static/js/2.d3de5d45.chunk.js",
-    "static/js/2.d3de5d45.chunk.js.map": "./static/js/2.d3de5d45.chunk.js.map",
+    "static/js/2.f95d0bae.chunk.js": "./static/js/2.f95d0bae.chunk.js",
+    "static/js/2.f95d0bae.chunk.js.map": "./static/js/2.f95d0bae.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.16f9988a2d05c9d92c79b63e8c5a1760.js": "./precache-manifest.16f9988a2d05c9d92c79b63e8c5a1760.js",
+    "precache-manifest.b750f939accd8fab82b42558104ebfda.js": "./precache-manifest.b750f939accd8fab82b42558104ebfda.js",
     "service-worker.js": "./service-worker.js",
     "static/css/2.6df4c8f8.chunk.css.map": "./static/css/2.6df4c8f8.chunk.css.map",
     "static/css/main.dc0a14bb.chunk.css.map": "./static/css/main.dc0a14bb.chunk.css.map",
-    "static/js/2.d3de5d45.chunk.js.LICENSE.txt": "./static/js/2.d3de5d45.chunk.js.LICENSE.txt",
+    "static/js/2.f95d0bae.chunk.js.LICENSE.txt": "./static/js/2.f95d0bae.chunk.js.LICENSE.txt",
     "static/media/banner_matriculas_Prancheta-1.png": "./static/media/banner_matriculas_Prancheta-1.d19f37ae.png",
     "static/media/edebe.png": "./static/media/edebe.e55acbbc.png",
     "static/media/edital-bolsa-2011.jpeg": "./static/media/edital-bolsa-2011.0e67e6fb.jpeg",
-    "static/media/hotnews1.jpg": "./static/media/hotnews1.5746215c.jpg",
     "static/media/isma.jpg": "./static/media/isma.bad59f12.jpg",
     "static/media/logo-cdbl.png": "./static/media/logo-cdbl.54c437c2.png",
     "static/media/logo-landing.png": "./static/media/logo-landing.cca1cffb.png",
+    "static/media/matriculas2021.jpeg": "./static/media/matriculas2021.705a3662.jpeg",
     "static/media/missa-fake-post.jpg": "./static/media/missa-fake-post.ec81f566.jpg",
     "static/media/rede-salesiana.png": "./static/media/rede-salesiana.565b18af.png",
     "static/media/section-bg.png": "./static/media/section-bg.abd0cbb5.png"
@@ -28,8 +28,8 @@
   "entrypoints": [
     "static/js/runtime-main.f486c041.js",
     "static/css/2.6df4c8f8.chunk.css",
-    "static/js/2.d3de5d45.chunk.js",
+    "static/js/2.f95d0bae.chunk.js",
     "static/css/main.dc0a14bb.chunk.css",
-    "static/js/main.186a28a1.chunk.js"
+    "static/js/main.3e4cf6e6.chunk.js"
   ]
 }
