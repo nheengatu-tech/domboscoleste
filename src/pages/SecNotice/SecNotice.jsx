@@ -59,7 +59,7 @@ const SecNotice = (props) => {
               lineHeight: 1,
             }}
             >
-              Campanha e Renovalão de Matrículas 2021.
+              Campanha e Renovação de Matrículas 2021.
             </h2>
             <p>Iniciamos no dia 18/09 (sexta-feira) com a Rede Salesiana Brasil a Campanha e renovação de Matrículas para 2021 com o tema: Juntos Para Você Ser +. Reafirmamos a grande satisfação em tê-los como membros integrantes da comunidade educativa do Colégio Dom Bosco Leste. 
 Damos a partida ao Lançamento de Matrículas, venha mudar o mundo junto conosco! 
@@ -101,7 +101,7 @@ Mais informações: (92) 3131-4116/ 99259-9150
               </LinkedinShareButton>
               <WhatsappShareButton style={{ color: "#075e54"}}
               url={window.location.href}
-              title={"O Colégio Dom Bosco Leste anuncia o Edital de Bolsas 2021."}
+              title={"O Colégio Dom Bosco Leste inicia campanha e renovação de matrículas 2021"}
               >
                 <FaWhatsappSquare size={"2.5em"}/> 
               </WhatsappShareButton>
