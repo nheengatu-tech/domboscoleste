@@ -72,7 +72,7 @@ Realize sua inscrição e encontre a bolsa de estudo que sempre desejou!</p>
             </div>
             <div>
               Clique
-              <a href="https://drive.google.com/file/d/195XhYXu8epJTxLWBAs5x7AtQUtpbeav9/view?usp=sharing" target="blank">
+              <a href="https://drive.google.com/file/d/1GIhelk5TJrMkr16C7212Ez0MaMJYGuIL/view?usp=sharing" target="blank">
               {' '} aqui
               </a> para baixar o Edital
             </div>

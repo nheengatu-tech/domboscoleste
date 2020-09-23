@@ -19,7 +19,7 @@ const BannerSection = () => {
             fontSize: "32px",
             fontWeight: "bolder"
           }}>
-            73
+            66
           </span>
           <span style={{
             display: "flex",
@@ -82,7 +82,7 @@ const BannerSection = () => {
           textAlign: "center"
         }}>
           <h2 style={{ color: "#555", fontWeight: "bolder" }}>
-            Escola Salesiana Dom Bosco Leste
+            Colégio Salesiano Dom Bosco Leste
           </h2>
           <p style={{ fontSize: "19px" }}>
             Seja bem-vindo à maior rede de escolas católicas das Américas!
