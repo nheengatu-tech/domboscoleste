@@ -15,8 +15,9 @@ import bannerMatriculaAberta from "../../images/banner-matriculas-abertas.png";
 // };
 
 const Item = styled.img`
-  width: 1350px;
-  height: 400px;
+  width: fit-content;
+  max-width: fit-content;
+  height: 450px;
   cursor: pointer;
 `;
 
@@ -26,6 +27,10 @@ const CarouselList = () => {
       <span
         style={{
           cursor: "pointer",
+          width: "100%",
+          display: "flex !important",
+          margin: "auto",
+          justifyContent: "center !important",
         }}
         onClick={() =>
           window.open(
@@ -42,6 +47,10 @@ const CarouselList = () => {
       <span
         style={{
           cursor: "pointer",
+          width: "100%",
+          display: "flex",
+          margin: "auto",
+          justifyContent: "center",
         }}
         onClick={() =>
           window.open(
