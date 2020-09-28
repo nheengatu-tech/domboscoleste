@@ -54,7 +54,7 @@ const ThNotice = (props) => {
             <img
               style={{ maxWidth: "500px", maxHeight: "335px", padding: "12px" }}
               src={campanhaSetAmarelo}
-              alt={"campanha de matrículas 2021"}
+              alt={"Campanha Setembro Amarelo 2020"}
             />
             {/* <span>Missa Solene em Honra à Nossa Senhora Auxiliadora.</span> */}
           </div>
@@ -118,14 +118,14 @@ const ThNotice = (props) => {
                   color: "#4267b2",
                 }}
                 quote={
-                  "O Colégio Dom Bosco Leste inicia campanha e renovação de matrículas 2021."
+                  "O Colégio Dom Bosco Leste inicia campanha sobre o Setembro Amarelo 2020."
                 }
                 url={`https://www.domboscoleste.com.br${window.location.pathname}`}
               >
                 <Helmet>
                   <meta
                     property="og:title"
-                    content="O Colégio Dom Bosco Leste inicia campanha e renovação de matrículas 2021."
+                    content="O Colégio Dom Bosco Leste inicia campanha sobre o Setembro Amarelo 2020."
                   ></meta>
                   <meta property="og:image" content={campanhaSetAmarelo}></meta>
                   <meta property="og:image:type" content="image/jpg"></meta>
@@ -143,7 +143,7 @@ const ThNotice = (props) => {
                 style={{ color: "#075e54" }}
                 url={window.location.href}
                 title={
-                  "O Colégio Dom Bosco Leste inicia campanha e renovação de matrículas 2021"
+                  "O Colégio Dom Bosco Leste inicia campanha sobre o Setembro Amarelo 2020."
                 }
               >
                 <FaWhatsappSquare size={"2.5em"} />
