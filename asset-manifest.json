@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "./static/css/main.dc0a14bb.chunk.css",
-    "main.js": "./static/js/main.5a5537fc.chunk.js",
-    "main.js.map": "./static/js/main.5a5537fc.chunk.js.map",
+    "main.js": "./static/js/main.3b76a867.chunk.js",
+    "main.js.map": "./static/js/main.3b76a867.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.f486c041.js",
     "runtime-main.js.map": "./static/js/runtime-main.f486c041.js.map",
     "static/css/2.6df4c8f8.chunk.css": "./static/css/2.6df4c8f8.chunk.css",
-    "static/js/2.09aca897.chunk.js": "./static/js/2.09aca897.chunk.js",
-    "static/js/2.09aca897.chunk.js.map": "./static/js/2.09aca897.chunk.js.map",
+    "static/js/2.19561852.chunk.js": "./static/js/2.19561852.chunk.js",
+    "static/js/2.19561852.chunk.js.map": "./static/js/2.19561852.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.7850e71f5af1f78342bb2f8d0bcc8f6a.js": "./precache-manifest.7850e71f5af1f78342bb2f8d0bcc8f6a.js",
+    "precache-manifest.19680d1a2ba66335f47a9dd28d7aab5a.js": "./precache-manifest.19680d1a2ba66335f47a9dd28d7aab5a.js",
     "service-worker.js": "./service-worker.js",
     "static/css/2.6df4c8f8.chunk.css.map": "./static/css/2.6df4c8f8.chunk.css.map",
     "static/css/main.dc0a14bb.chunk.css.map": "./static/css/main.dc0a14bb.chunk.css.map",
-    "static/js/2.09aca897.chunk.js.LICENSE.txt": "./static/js/2.09aca897.chunk.js.LICENSE.txt",
+    "static/js/2.19561852.chunk.js.LICENSE.txt": "./static/js/2.19561852.chunk.js.LICENSE.txt",
     "static/media/banner-matriculas-abertas.png": "./static/media/banner-matriculas-abertas.887d8f64.png",
     "static/media/banner-reserva-matricula.png": "./static/media/banner-reserva-matricula.422490a8.png",
     "static/media/dombosco-set-amarelo.jpeg": "./static/media/dombosco-set-amarelo.f8bc730c.jpeg",
@@ -25,13 +25,14 @@
     "static/media/matriculas2021.jpeg": "./static/media/matriculas2021.705a3662.jpeg",
     "static/media/missa-fake-post.jpg": "./static/media/missa-fake-post.ec81f566.jpg",
     "static/media/rede-salesiana.png": "./static/media/rede-salesiana.565b18af.png",
-    "static/media/section-bg.png": "./static/media/section-bg.abd0cbb5.png"
+    "static/media/section-bg.png": "./static/media/section-bg.abd0cbb5.png",
+    "static/media/shad_footer.png": "./static/media/shad_footer.a260f7ce.png"
   },
   "entrypoints": [
     "static/js/runtime-main.f486c041.js",
     "static/css/2.6df4c8f8.chunk.css",
-    "static/js/2.09aca897.chunk.js",
+    "static/js/2.19561852.chunk.js",
     "static/css/main.dc0a14bb.chunk.css",
-    "static/js/main.5a5537fc.chunk.js"
+    "static/js/main.3b76a867.chunk.js"
   ]
 }
