@@ -13,6 +13,7 @@ import {
   Contact,
   Notice,
   Post,
+  TotemHome,
 } from "./pages";
 import { Header } from "./components/Header";
 import { Menu } from "./components/Menu";
@@ -66,6 +67,15 @@ function App() {
                 </>
               )}
             />
+            {/* TOTEM */}
+            <Route
+              exact={false}
+              path={"/totem"}
+              component={(props) => (
+                <TotemHome history={history} {...props}></TotemHome>
+              )}
+            />
+            {/* FIM ROTAS TOTEM */}
             <Route
               exact={true}
               path={"/noticias/edital-bolsas-2021-cdbl"}
