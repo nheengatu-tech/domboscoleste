@@ -3,6 +3,7 @@ import { AboutUs } from "./AboutUs";
 import { Education } from "./Education";
 import { Contact } from "./Contact";
 import { Notice } from "./Notice";
+import { NoticeList } from "./NoticeList";
 import { Login } from "./Login";
 import { User } from "./User";
 import { Post } from "./Post";
@@ -15,6 +16,7 @@ export {
   Education,
   Contact,
   Notice,
+  NoticeList,
   User,
   Post,
   TotemHome,

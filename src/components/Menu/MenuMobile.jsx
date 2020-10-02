@@ -71,8 +71,10 @@ const MenuMobile = (props) => {
                 </Link>
               </MenuMobileItem>
               <MenuMobileItem>
-                <BiNews />
-                <span>Notícias</span>
+                <Link to="/noticias">
+                  <BiNews />
+                  <span>Notícias</span>
+                </Link>
               </MenuMobileItem>
               <MenuMobileItem>
                 <Link to="/ensino">

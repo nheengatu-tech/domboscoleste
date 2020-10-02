@@ -12,6 +12,7 @@ import {
   Education,
   Contact,
   Notice,
+  NoticeList,
   Post,
   TotemHome,
 } from "./pages";
@@ -76,6 +77,18 @@ function App() {
               )}
             />
             {/* FIM ROTAS TOTEM */}
+            <Route
+              exact={true}
+              path={"/noticias"}
+              component={(props) => (
+                <>
+                  <Header />
+                  <Menu history={history} />
+                  <NoticeList history={history} {...props}></NoticeList>
+                  <Footer />
+                </>
+              )}
+            />
             <Route
               exact={true}
               path={"/noticias/edital-bolsas-2021-cdbl"}

@@ -35,7 +35,9 @@ const MenuDesktop = (props) => {
             <NavItem>
               <Link to="/institucional">NOSSA ESCOLA</Link>
             </NavItem>
-            <NavItem>NOTICIAS</NavItem>
+            <NavItem>
+              <Link to="/noticias">NOTICIAS</Link>
+            </NavItem>
             <NavItem>
               <Link to="/ensino">ENSINO</Link>
             </NavItem>
