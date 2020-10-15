@@ -2,43 +2,73 @@ import React, { useState, useEffect } from "react";
 import { Container, FormField } from "./styles";
 import { Button } from "../../components/Button";
 import { Form } from "@unform/web";
-import useJsonBox from "react-jsonbox";
 import Snackbar from "@material-ui/core/Snackbar";
 import Alert from "@material-ui/lab/Alert";
 import { isUserLogged } from "../../utils";
 import salesianaLogo from "../../images/rede-salesiana.png";
+import { useFirestoreDocData, useFirestore } from "reactfire";
+import Loading from "../../components/Loading/Loading";
+// import base from "../../rebase";
+// base
+//   .fetch("api", {
+//     context: this,
+//     asArray: true,
+//   })
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => {
+//     //handle error
+//   });
 
 const Login = (props) => {
-  const { read } = useJsonBox();
-  const [values, setValues] = useState([]);
+  const data = [
+    {
+      name: "Roberto Campos",
+      password: "123456",
+      email: "roberto.campos@domboscoleste.com.br",
+    },
+    {
+      name: "Paula Vitória",
+      password: "123456",
+      email: "paula.vitoria@domboscoleste.com.br",
+    },
+  ];
+  const cdbApi = useFirestore().collection("api").doc("users");
+  const users = useFirestoreDocData(cdbApi);
+  // useFirestore().collection("api").doc("users").set({
+  //   user: data,
+  // });
+  // console.log(useFirestoreDocData(cdbApi));
+  const [values, setValues] = useState(users);
+  const [isLoading, setLoading] = useState(true);
   const [alert, setAlert] = useState({
     isAlertOpen: false,
     status: "info",
     message: "",
   });
-  
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const fetchUsers = async () => {
-    const { data } = await read("users");
-    setValues(data);
-  }
+  const fetchUsers = () => {
+    console.log("fetchUsers");
+    console.log(values);
+    // setValues(data.users);
+    setLoading(false);
+  };
 
   useEffect(() => {
     if (isUserLogged()) {
       props.history.push("/usuarios");
     }
     fetchUsers();
-  }, []);
+  }, [fetchUsers, props.history]);
 
   const submitForm = (data, { reset }) => {
-    values.forEach((user) => {
+    values.user.forEach((user) => {
       if (user.email === data.email && user.password === data.password) {
         console.log(user);
-        localStorage.setItem(
-          "@cdbl/session_user",
-          JSON.stringify(user)
-        );
-        props.history.push("/dashboard");
+        localStorage.setItem("@cdbl/session_user", JSON.stringify(user));
+        props.history.push("/admin/noticias");
       }
     });
     setAlert({
@@ -73,41 +103,52 @@ const Login = (props) => {
           </Alert>
         </Snackbar>
       }
-      <Form
-        style={{
-          height: "100vh",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          color: "white",
-        }}
-        onSubmit={submitForm}
-      >
-        <img
+      {isLoading ? (
+        <div
           style={{
-            maxWidth: "400px",
             display: "flex",
-            margin: "0 auto 0",
+            height: "-webkit-fill-available",
           }}
-          src={salesianaLogo}
-          alt={"Logotipo"}
-        />
-        <Container>
-          <div
+        >
+          <Loading />
+        </div>
+      ) : (
+        <Form
+          style={{
+            height: "100vh",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            color: "white",
+          }}
+          onSubmit={submitForm}
+        >
+          <img
             style={{
+              maxWidth: "400px",
               display: "flex",
-              margin: "32px auto",
-              flexDirection: "column",
-              width: "90%",
+              margin: "0 auto 0",
             }}
-          >
-            <h2>Login</h2>
-            <FormField name="email" label="E-mail" type="email" />
-            <FormField name="password" label="Senha" type="password" />
-            <Button type="submit">ENTRAR</Button>
-          </div>
-        </Container>
-      </Form>
+            src={salesianaLogo}
+            alt={"Logotipo"}
+          />
+          <Container>
+            <div
+              style={{
+                display: "flex",
+                margin: "32px auto",
+                flexDirection: "column",
+                width: "90%",
+              }}
+            >
+              <h2>Login</h2>
+              <FormField name="email" label="E-mail" type="email" />
+              <FormField name="password" label="Senha" type="password" />
+              <Button type="submit">ENTRAR</Button>
+            </div>
+          </Container>
+        </Form>
+      )}
     </>
   );
 };

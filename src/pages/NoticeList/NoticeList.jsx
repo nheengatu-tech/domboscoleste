@@ -4,7 +4,7 @@ import campanhaSetAmarelo from "../../images/dombosco-set-amarelo.jpeg";
 import editalBolsa from "../../images/edital-bolsa-2011.jpeg";
 import campanhaMatricula from "../../images/matriculas2021.jpeg";
 
-const NoticeList = (props) => {
+const NoticeList = () => {
   return (
     <div>
       <TitleContainer>

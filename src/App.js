@@ -24,12 +24,17 @@ import { SecNotice } from "./pages/SecNotice";
 import { ThNotice } from "./pages/ThNotice";
 import logoCdbl from "./images/logo-cdbl.png";
 import { Helmet } from "react-helmet";
+import { SuspenseWithPerf} from 'reactfire';
 
 const history = createBrowserHistory();
 
 function App() {
   return (
     <div className="App">
+      <SuspenseWithPerf
+        fallback={'Carregando...'}
+        traceId={'load-status'}
+      >
       <Helmet>
         <meta charSet="utf-8" />
         <link rel="canonical" href="https://www.domboscoleste.com.br" />
@@ -145,7 +150,7 @@ function App() {
             />
             <Route
               exact={false}
-              path={"/noticias"}
+              path={"/admin/noticias"}
               component={(props) => <Post history={history} {...props}></Post>}
             />
             <Route
@@ -195,6 +200,7 @@ function App() {
           {/* <Footer /> */}
         </JsonBoxProvider>
       </HashRouter>
+      </SuspenseWithPerf>
     </div>
   );
 }

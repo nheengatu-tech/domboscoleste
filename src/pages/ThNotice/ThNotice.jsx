@@ -11,7 +11,6 @@ import campanhaSetAmarelo from "../../images/dombosco-set-amarelo.jpeg";
 import { Helmet } from "react-helmet";
 
 const ThNotice = (props) => {
-  const widthScreen = window.innerWidth;
   return (
     <div>
       <Helmet>
