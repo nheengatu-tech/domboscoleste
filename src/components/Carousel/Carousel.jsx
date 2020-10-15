@@ -44,7 +44,7 @@ const CarouselList = () => {
           alt={"Reserva de matrícula banner"}
         />
       </span>
-      <span
+      {/* <span
         style={{
           cursor: "pointer",
           width: "100%",
@@ -63,7 +63,7 @@ const CarouselList = () => {
           src={bannerMatriculaAberta}
           alt={"banner de matrículas abertas"}
         />
-      </span>
+      </span> */}
       {/* <Item src={bannerParceiros} alt={"Hero banner"} /> */}
     </Carousel>
   );
