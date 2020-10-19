@@ -4,6 +4,7 @@ import { RiAddCircleLine } from "react-icons/ri";
 import editalBolsa from "../../images/edital-bolsa-2011.jpeg";
 import campanhaMatricula from "../../images/matriculas2021.jpeg";
 import campanhaSetAmarelo from "../../images/dombosco-set-amarelo.jpeg";
+import semanaDaCrianca from "../../images/semana-da-crianca.jpeg";
 
 const HotNews = () => {
   return (
@@ -32,6 +33,63 @@ const HotNews = () => {
         </Button>
       </TitleGrid>
       <ContainerGrid>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            flexBasis: "30%",
+            cursor: "pointer",
+            margin: "8px",
+          }}
+        >
+          <span
+            style={{
+              color: "#666666",
+              fontSize: "12px",
+              textAlign: "start",
+            }}
+          >
+            19/10/2020
+          </span>
+          <h5
+            style={{
+              marginTop: 0,
+              fontSize: "16px",
+              color: "#003094",
+              textAlign: "start",
+              lineHeight: "initial",
+            }}
+          >
+            Festinha da Semana da Criança no CDB Leste - Confira as fotos aqui
+          </h5>
+          <ImgNews>
+            <img
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+              }}
+              src={semanaDaCrianca}
+              alt={"hot news"}
+            />
+          </ImgNews>
+          <p
+            style={{
+              color: "#666666",
+              fontSize: "14px",
+              paddingTop: "10px",
+              textAlign: "justify",
+            }}
+          >
+            Realizamos durante uma semana inteira a Festa em comemoração as
+            crianças!
+          </p>
+          <Button
+            onClick={() => window.open("#/noticias/semana-da-crianca")}
+            style={{ margin: "auto 0", textTransform: "initial" }}
+          >
+            Leia mais
+          </Button>
+        </div>
         <div
           style={{
             display: "flex",
@@ -143,64 +201,6 @@ const HotNews = () => {
           </p>
           <Button
             onClick={() => window.open("#/noticias/campanha-matriculas-2021")}
-            style={{ margin: "auto 0", textTransform: "initial" }}
-          >
-            Leia mais
-          </Button>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            flexBasis: "30%",
-            cursor: "pointer",
-            margin: "8px",
-          }}
-        >
-          <span
-            style={{
-              color: "#666666",
-              fontSize: "12px",
-              textAlign: "start",
-            }}
-          >
-            04/09/2020
-          </span>
-          <h5
-            style={{
-              marginTop: 0,
-              fontSize: "16px",
-              color: "#003094",
-              textAlign: "start",
-              lineHeight: "initial",
-            }}
-          >
-            O Colégio Dom Bosco Leste anuncia o Edital de Bolsas 2021.
-          </h5>
-          <ImgNews>
-            <img
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-              }}
-              src={editalBolsa}
-              alt={"hot news"}
-            />
-          </ImgNews>
-          <p
-            style={{
-              color: "#666666",
-              fontSize: "14px",
-              paddingTop: "10px",
-              textAlign: "justify",
-            }}
-          >
-            Realize sua inscrição e encontre a bolsa de estudo que sempre
-            desejou!
-          </p>
-          <Button
-            onClick={() => window.open("#/noticias/edital-bolsas-2021-cdbl")}
             style={{ margin: "auto 0", textTransform: "initial" }}
           >
             Leia mais

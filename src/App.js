@@ -18,10 +18,12 @@ import {
 } from "./pages";
 import { Header } from "./components/Header";
 import { Menu } from "./components/Menu";
+import Loading from "./components/Loading/Loading";
 import { Footer } from "./components/Footer";
 import { WIPNotice } from "./pages/WIPNotice";
 import { SecNotice } from "./pages/SecNotice";
 import { ThNotice } from "./pages/ThNotice";
+import { FourNotice } from "./pages/FourNotice";
 import logoCdbl from "./images/logo-cdbl.png";
 import { Helmet } from "react-helmet";
 import { SuspenseWithPerf} from 'reactfire';
@@ -32,7 +34,14 @@ function App() {
   return (
     <div className="App">
       <SuspenseWithPerf
-        fallback={'Carregando...'}
+        fallback={<div
+          style={{
+            display: "flex",
+            height: "-webkit-fill-available",
+          }}
+        >
+          <Loading />
+        </div>}
         traceId={'load-status'}
       >
       <Helmet>
@@ -126,6 +135,18 @@ function App() {
                   <Header />
                   <Menu history={history} />
                   <ThNotice history={history} {...props}></ThNotice>
+                  <Footer />
+                </>
+              )}
+            />
+            <Route
+              exact={true}
+              path={"/noticias/semana-da-crianca"}
+              component={(props) => (
+                <>
+                  <Header />
+                  <Menu history={history} />
+                  <FourNotice history={history} {...props}></FourNotice>
                   <Footer />
                 </>
               )}

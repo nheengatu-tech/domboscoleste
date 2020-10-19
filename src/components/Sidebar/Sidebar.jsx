@@ -8,16 +8,24 @@ import {
   ListItemText,
 } from "@material-ui/core";
 import PeopleIcon from "@material-ui/icons/People";
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
-import PostAddIcon from '@material-ui/icons/PostAdd';
-import { logout } from '../../utils'
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import PostAddIcon from "@material-ui/icons/PostAdd";
+import { logout } from "../../utils";
 
 const Sidebar = (props) => {
   return (
     <>
-      <SwipeableDrawer onClose={() => {}} onOpen={() => {}} open={true} variant={"persistent"}>
+      <SwipeableDrawer
+        onClose={() => {}}
+        onOpen={() => {}}
+        open={true}
+        variant={"persistent"}
+      >
         <List>
-          <ListItem button onClick={() => props.history.push("/noticias")}>
+          <ListItem
+            button
+            onClick={() => props.history.push("/admin/noticias")}
+          >
             <ListItemIcon>
               <PostAddIcon />
             </ListItemIcon>
@@ -31,12 +39,15 @@ const Sidebar = (props) => {
             <ListItemText primary={"Usuários"} />
           </ListItem>
           <Divider />
-          <ListItem style={{
-            position: "fixed",
-            bottom: 0,
-            width: "initial"
+          <ListItem
+            style={{
+              position: "fixed",
+              bottom: 0,
+              width: "initial",
             }}
-            button onClick={() => logout()}>
+            button
+            onClick={() => logout()}
+          >
             <ListItemIcon>
               <ExitToAppIcon />
             </ListItemIcon>
