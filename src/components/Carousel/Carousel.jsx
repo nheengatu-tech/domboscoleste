@@ -1,10 +1,10 @@
 import React from "react";
 import { Carousel } from "antd";
 import styled from "styled-components";
-// import bannerHero from "../../images/banner_matriculas_Prancheta-1.png";
-import bannerReservaMatricula from "../../images/banner-reserva-matricula.png";
-import bannerMatriculaAberta from "../../images/banner-matriculas-abertas.png";
-// import bannerParceiros from '../../images/banner-parceiros.jpeg'
+import bannerListaMaterial from "../../images/baner-lista-de-material.jpeg";
+import bannerProcessoSeletivoBolsas from "../../images/banner-processo-seletivo-bolsas.jpeg";
+import bannerMatricula from "../../images/banner-matricula.jpeg";
+import { tablet } from "../../_breakpoints";
 
 // const contentStyle = {
 //   height: '160px',
@@ -15,15 +15,35 @@ import bannerMatriculaAberta from "../../images/banner-matriculas-abertas.png";
 // };
 
 const Item = styled.img`
-  width: fit-content;
-  max-width: fit-content;
-  height: 450px;
+  height: inherit;
   cursor: pointer;
+  display: flex;
+  width: 100%;
+  display: flex !important;
+  justify-content: center;
 `;
+// 1349X348
 
 const CarouselList = () => {
   return (
     <Carousel autoplay>
+      <span
+        style={{
+          cursor: "pointer",
+          width: "100%",
+          display: "flex !important",
+          margin: "auto",
+          justifyContent: "center !important",
+        }}
+        onClick={() =>
+          window.open(
+            "https://drive.google.com/file/d/107jPMuNvQp663t-XZ045fvL0R3RAr33j/view?usp=sharing",
+            "_blank"
+          )
+        }
+      >
+        <Item src={bannerListaMaterial} alt={"Lista de Material"} />
+      </span>
       <span
         style={{
           cursor: "pointer",
@@ -40,31 +60,27 @@ const CarouselList = () => {
         }
       >
         <Item
-          src={bannerReservaMatricula}
-          alt={"Reserva de matrícula banner"}
+          src={bannerProcessoSeletivoBolsas}
+          alt={"Processo seletivo de Bolsas"}
         />
       </span>
-      {/* <span
+      <span
         style={{
           cursor: "pointer",
           width: "100%",
-          display: "flex",
+          display: "flex !important",
           margin: "auto",
-          justifyContent: "center",
+          justifyContent: "center !important",
         }}
         onClick={() =>
           window.open(
-            "https://forms.gennera.com.br/view#/formulario/2723299494235674115",
+            "https://drive.google.com/file/d/1eyrylki2liBBfLEAiJC56borL3rZu2IA/view?usp=sharing",
             "_blank"
           )
         }
       >
-        <Item
-          src={bannerMatriculaAberta}
-          alt={"banner de matrículas abertas"}
-        />
-      </span> */}
-      {/* <Item src={bannerParceiros} alt={"Hero banner"} /> */}
+        <Item src={bannerMatricula} alt={"Banner de matricula 2021"} />
+      </span>
     </Carousel>
   );
 };
