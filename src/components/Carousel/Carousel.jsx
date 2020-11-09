@@ -54,7 +54,7 @@ const CarouselList = () => {
         }}
         onClick={() =>
           window.open(
-            "https://forms.gennera.com.br/view#/formulario/5489646583647829751",
+            "https://drive.google.com/file/d/1eyrylki2liBBfLEAiJC56borL3rZu2IA/view?usp=sharing",
             "_blank"
           )
         }
@@ -74,7 +74,7 @@ const CarouselList = () => {
         }}
         onClick={() =>
           window.open(
-            "https://drive.google.com/file/d/1eyrylki2liBBfLEAiJC56borL3rZu2IA/view?usp=sharing",
+            "https://forms.gennera.com.br/view#/formulario/5489646583647829751",
             "_blank"
           )
         }
