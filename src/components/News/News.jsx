@@ -2,7 +2,9 @@ import React from "react";
 import { Button, Component, TitleGrid, ImgNews, ContainerGrid } from "./styles";
 import { RiAddCircleLine } from "react-icons/ri";
 import editalBolsa from "../../images/edital-bolsa-2011.jpeg";
-import campanhaMatricula from "../../images/matriculas2021.jpeg";
+import teatroCdbl from "../../images/teatro-cdbl.jpeg";
+import feiraCdbl from "../../images/voce-faz-a-feira.jpeg";
+// import campanhaMatricula from "../../images/matriculas2021.jpeg";
 import campanhaSetAmarelo from "../../images/dombosco-set-amarelo.jpeg";
 import semanaDaCrianca from "../../images/semana-da-crianca.jpeg";
 
@@ -33,6 +35,122 @@ const HotNews = () => {
         </Button>
       </TitleGrid>
       <ContainerGrid>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            flexBasis: "30%",
+            cursor: "pointer",
+            margin: "8px",
+          }}
+        >
+          <span
+            style={{
+              color: "#666666",
+              fontSize: "12px",
+              textAlign: "start",
+            }}
+          >
+            12/11/2020
+          </span>
+          <h5
+            style={{
+              marginTop: 0,
+              fontSize: "16px",
+              color: "#003094",
+              textAlign: "start",
+              lineHeight: "initial",
+            }}
+          >
+            Projeto da rede: Você faz à feira!
+          </h5>
+          <ImgNews>
+            <img
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+              }}
+              src={feiraCdbl}
+              alt={"Projeto da rede: Você faz à feira!"}
+            />
+          </ImgNews>
+          <p
+            style={{
+              color: "#666666",
+              fontSize: "14px",
+              paddingTop: "10px",
+              textAlign: "justify",
+            }}
+          >
+            Realizado pelas turmas 3° A/B do EF I, com as professoras Sandra
+            Maria e Janaína no intuito de investigar os tipos de alimentos que
+            ingerimos e saber um pouco mais sobre os caminhos que um alimento
+            percorre até chegar ao nosso prato.
+          </p>
+          <Button
+            onClick={() => window.open("#/noticias/voce-faz-a-feira")}
+            style={{ margin: "auto 0", textTransform: "initial" }}
+          >
+            Leia mais
+          </Button>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            flexBasis: "30%",
+            cursor: "pointer",
+            margin: "8px",
+          }}
+        >
+          <span
+            style={{
+              color: "#666666",
+              fontSize: "12px",
+              textAlign: "start",
+            }}
+          >
+            12/11/2020
+          </span>
+          <h5
+            style={{
+              marginTop: 0,
+              fontSize: "16px",
+              color: "#003094",
+              textAlign: "start",
+              lineHeight: "initial",
+            }}
+          >
+            Teatro do Terceirão Ensino Médio Colégio Dom Bosco Leste!
+          </h5>
+          <ImgNews>
+            <img
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+              }}
+              src={teatroCdbl}
+              alt={"Teatro 3° Ensino Médio"}
+            />
+          </ImgNews>
+          <p
+            style={{
+              color: "#666666",
+              fontSize: "14px",
+              paddingTop: "10px",
+              textAlign: "justify",
+            }}
+          >
+            Atividade realizada pela disciplina de Educação Física ministrada
+            pelo Prof° Paulo Milton sobre transtorno psicológicos!
+          </p>
+          <Button
+            onClick={() => window.open("#/noticias/teatro-cdbl-ensino-medio")}
+            style={{ margin: "auto 0", textTransform: "initial" }}
+          >
+            Leia mais
+          </Button>
+        </div>
         <div
           style={{
             display: "flex",
@@ -85,122 +203,6 @@ const HotNews = () => {
           </p>
           <Button
             onClick={() => window.open("#/noticias/semana-da-crianca")}
-            style={{ margin: "auto 0", textTransform: "initial" }}
-          >
-            Leia mais
-          </Button>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            flexBasis: "30%",
-            cursor: "pointer",
-            margin: "8px",
-          }}
-        >
-          <span
-            style={{
-              color: "#666666",
-              fontSize: "12px",
-              textAlign: "start",
-            }}
-          >
-            28/09/2020
-          </span>
-          <h5
-            style={{
-              marginTop: 0,
-              fontSize: "16px",
-              color: "#003094",
-              textAlign: "start",
-              lineHeight: "initial",
-            }}
-          >
-            Campanha Setembro Amarelo 2020 Colégio Dom Bosco Leste.
-          </h5>
-          <ImgNews>
-            <img
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-              }}
-              src={campanhaSetAmarelo}
-              alt={"campanha setembro amarelo 2020"}
-            />
-          </ImgNews>
-          <p
-            style={{
-              color: "#666666",
-              fontSize: "14px",
-              paddingTop: "10px",
-              textAlign: "justify",
-            }}
-          >
-            A Equipe de Pastoral juntamente com o corpo docente iniciou-se uma
-            sensibilização a ação da nossa proposta pedagógica.
-          </p>
-          <Button
-            onClick={() =>
-              window.open("#/noticias/campanha-setembro-amarelo-2020")
-            }
-            style={{ margin: "auto 0", textTransform: "initial" }}
-          >
-            Leia mais
-          </Button>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            flexBasis: "30%",
-            cursor: "pointer",
-            margin: "8px",
-          }}
-        >
-          <span
-            style={{
-              color: "#666666",
-              fontSize: "12px",
-              textAlign: "start",
-            }}
-          >
-            21/09/2020
-          </span>
-          <h5
-            style={{
-              marginTop: 0,
-              fontSize: "16px",
-              color: "#003094",
-              textAlign: "start",
-              lineHeight: "initial",
-            }}
-          >
-            Início da Campanha de Matrículas e Renovação 2021 Dom Bosco Leste.
-          </h5>
-          <ImgNews>
-            <img
-              style={{
-                maxWidth: "100%",
-                height: "auto",
-              }}
-              src={campanhaMatricula}
-              alt={"campanha cdbleste matricula 2021"}
-            />
-          </ImgNews>
-          <p
-            style={{
-              color: "#666666",
-              fontSize: "14px",
-              paddingTop: "10px",
-              textAlign: "justify",
-            }}
-          >
-            Reafirmamos a grande satisfação em tê-los como membros integrantes
-            da comunidade educativa do Colégio Dom Bosco Leste.
-          </p>
-          <Button
-            onClick={() => window.open("#/noticias/campanha-matriculas-2021")}
             style={{ margin: "auto 0", textTransform: "initial" }}
           >
             Leia mais

@@ -24,6 +24,8 @@ import { WIPNotice } from "./pages/WIPNotice";
 import { SecNotice } from "./pages/SecNotice";
 import { ThNotice } from "./pages/ThNotice";
 import { FourNotice } from "./pages/FourNotice";
+import { FifthNotice } from "./pages/FifthNotice";
+import { SixthNotice } from "./pages/SixthNotice";
 import logoCdbl from "./images/logo-cdbl.png";
 import { Helmet } from "react-helmet";
 import { SuspenseWithPerf} from 'reactfire';
@@ -147,6 +149,30 @@ function App() {
                   <Header />
                   <Menu history={history} />
                   <FourNotice history={history} {...props}></FourNotice>
+                  <Footer />
+                </>
+              )}
+            />
+            <Route
+              exact={true}
+              path={"/noticias/teatro-cdbl-ensino-medio"}
+              component={(props) => (
+                <>
+                  <Header />
+                  <Menu history={history} />
+                  <FifthNotice history={history} {...props}></FifthNotice>
+                  <Footer />
+                </>
+              )}
+            />
+            <Route
+              exact={true}
+              path={"/noticias/voce-faz-a-feira"}
+              component={(props) => (
+                <>
+                  <Header />
+                  <Menu history={history} />
+                  <SixthNotice history={history} {...props}></SixthNotice>
                   <Footer />
                 </>
               )}
