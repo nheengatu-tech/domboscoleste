@@ -4,6 +4,7 @@ import styled from "styled-components";
 import bannerListaMaterial from "../../images/baner-lista-de-material.jpeg";
 import bannerProcessoSeletivoBolsas from "../../images/banner-processo-seletivo-bolsas.jpeg";
 import bannerMatricula from "../../images/banner-matricula.jpeg";
+import bannerResultado from "../../images/banner-resultado.jpg";
 import { tablet } from "../../_breakpoints";
 
 // const contentStyle = {
@@ -37,6 +38,23 @@ const CarouselList = () => {
         }}
         onClick={() =>
           window.open(
+            "https://drive.google.com/file/d/1CDafTFlOhHiLftOK8xFi03FI79W9PeWa/view?usp=sharing",
+            "_blank"
+          )
+        }
+      >
+        <Item src={bannerResultado} alt={"Lista de Resultado"} />
+      </span>
+      <span
+        style={{
+          cursor: "pointer",
+          width: "100%",
+          display: "flex !important",
+          margin: "auto",
+          justifyContent: "center !important",
+        }}
+        onClick={() =>
+          window.open(
             "https://drive.google.com/file/d/107jPMuNvQp663t-XZ045fvL0R3RAr33j/view?usp=sharing",
             "_blank"
           )
@@ -44,7 +62,7 @@ const CarouselList = () => {
       >
         <Item src={bannerListaMaterial} alt={"Lista de Material"} />
       </span>
-      <span
+      {/* <span
         style={{
           cursor: "pointer",
           width: "100%",
@@ -63,7 +81,7 @@ const CarouselList = () => {
           src={bannerProcessoSeletivoBolsas}
           alt={"Processo seletivo de Bolsas"}
         />
-      </span>
+      </span> */}
       <span
         style={{
           cursor: "pointer",
