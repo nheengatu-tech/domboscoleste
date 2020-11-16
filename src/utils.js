@@ -16,4 +16,7 @@ const logout = () => {
   window.location.replace("/login")
 }
 
-export { isUserLogged, getUser, logout };
+const BASE_URL = "http://localhost:4000"
+const TOKENNAME = "@cdbl/session_user"
+
+export { BASE_URL, isUserLogged, getUser, logout, TOKENNAME };

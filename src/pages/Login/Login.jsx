@@ -4,78 +4,49 @@ import { Button } from "../../components/Button";
 import { Form } from "@unform/web";
 import Snackbar from "@material-ui/core/Snackbar";
 import Alert from "@material-ui/lab/Alert";
-import { isUserLogged } from "../../utils";
+import { isUserLogged, BASE_URL, TOKENNAME } from "../../utils";
 import salesianaLogo from "../../images/rede-salesiana.png";
-import { useFirestoreDocData, useFirestore } from "reactfire";
 import Loading from "../../components/Loading/Loading";
-// import base from "../../rebase";
-// base
-//   .fetch("api", {
-//     context: this,
-//     asArray: true,
-//   })
-//   .then((data) => {
-//     console.log(data);
-//   })
-//   .catch((error) => {
-//     //handle error
-//   });
 
 const Login = (props) => {
-  const data = [
-    {
-      name: "Roberto Campos",
-      password: "123456",
-      email: "roberto.campos@domboscoleste.com.br",
-    },
-    {
-      name: "Paula Vitória",
-      password: "123456",
-      email: "paula.vitoria@domboscoleste.com.br",
-    },
-  ];
-  const cdbApi = useFirestore().collection("api").doc("users");
-  const users = useFirestoreDocData(cdbApi);
-  // useFirestore().collection("api").doc("users").set({
-  //   user: data,
-  // });
-  // console.log(useFirestoreDocData(cdbApi));
-  const [values, setValues] = useState(users);
-  const [isLoading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState(false);
   const [alert, setAlert] = useState({
     isAlertOpen: false,
     status: "info",
     message: "",
   });
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const fetchUsers = () => {
-    console.log("fetchUsers");
-    console.log(values);
-    // setValues(data.users);
-    setLoading(false);
-  };
-
   useEffect(() => {
     if (isUserLogged()) {
       props.history.push("/usuarios");
     }
-    fetchUsers();
-  }, [fetchUsers, props.history]);
+  }, [props.history]);
 
   const submitForm = (data, { reset }) => {
-    values.user.forEach((user) => {
-      if (user.email === data.email && user.password === data.password) {
-        console.log(user);
-        localStorage.setItem("@cdbl/session_user", JSON.stringify(user));
-        props.history.push("/admin/noticias");
-      }
-    });
-    setAlert({
-      isAlertOpen: true,
-      status: "error",
-      message: "E-mail e/ou senha incorretos!",
-    });
+    const body = { email: data.email, password: data.password };
+    setLoading(true);
+    fetch(BASE_URL + "login", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(body),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        localStorage.setItem(TOKENNAME, data.token);
+        localStorage.setItem("user", JSON.stringify(data.user));
+        props.history.push("/appointments");
+      })
+      .catch(() => {
+        setAlert({
+          isAlertOpen: true,
+          status: "error",
+          message: "E-mail e/ou senha incorretos!",
+        });
+      });
+
+    setLoading(true);
     reset();
   };
 

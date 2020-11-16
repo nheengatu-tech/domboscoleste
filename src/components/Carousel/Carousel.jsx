@@ -5,6 +5,7 @@ import bannerListaMaterial from "../../images/baner-lista-de-material.jpeg";
 import bannerProcessoSeletivoBolsas from "../../images/banner-processo-seletivo-bolsas.jpeg";
 import bannerMatricula from "../../images/banner-matricula.jpeg";
 import bannerResultado from "../../images/banner-resultado.jpg";
+import bannerBlackWeek from "../../images/banner-blackweek.jpeg";
 import { tablet } from "../../_breakpoints";
 
 // const contentStyle = {
@@ -28,6 +29,23 @@ const Item = styled.img`
 const CarouselList = () => {
   return (
     <Carousel autoplay>
+      <span
+        style={{
+          cursor: "pointer",
+          width: "100%",
+          display: "flex !important",
+          margin: "auto",
+          justifyContent: "center !important",
+        }}
+        onClick={() =>
+          window.open(
+            "https://web.whatsapp.com/send?phone=+5592992599150",
+            "_blank"
+          )
+        }
+      >
+        <Item src={bannerBlackWeek} alt={"Black Week Promoção"} />
+      </span>
       <span
         style={{
           cursor: "pointer",
