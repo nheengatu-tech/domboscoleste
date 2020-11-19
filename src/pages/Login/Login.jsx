@@ -23,9 +23,10 @@ const Login = (props) => {
   }, [props.history]);
 
   const submitForm = (data, { reset }) => {
+    console.log("submit");
     const body = { email: data.email, password: data.password };
     setLoading(true);
-    fetch(BASE_URL + "login", {
+    fetch(BASE_URL + "/login", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -34,11 +35,13 @@ const Login = (props) => {
     })
       .then((response) => response.json())
       .then((data) => {
+        setLoading(false);
         localStorage.setItem(TOKENNAME, data.token);
-        localStorage.setItem("user", JSON.stringify(data.user));
-        props.history.push("/appointments");
+        localStorage.setItem("@cdbl/user", JSON.stringify(data.user));
+        props.history.push("/admin/noticias");
       })
       .catch(() => {
+        setLoading(false);
         setAlert({
           isAlertOpen: true,
           status: "error",
@@ -46,7 +49,6 @@ const Login = (props) => {
         });
       });
 
-    setLoading(true);
     reset();
   };
 
