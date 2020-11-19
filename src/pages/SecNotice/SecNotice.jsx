@@ -90,7 +90,7 @@ const SecNotice = (props) => {
               Clique
               <a
                 href="https://www.flickr.com/photos/190154461@N08/albums/72157716063955147"
-                target="_blank"
+                target="_blank noreferrer"
               >
                 {" "}
                 aqui

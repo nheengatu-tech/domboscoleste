@@ -13,10 +13,12 @@ const getUser = () => {
 
 const logout = () => {
   localStorage.removeItem("@cdbl/session_user")
-  window.location.replace("/login")
+  localStorage.removeItem("@cdbl/user")
+  window.location.replace("/")
 }
 
-const BASE_URL = "http://localhost:4000"
+// const BASE_URL = "http://localhost:4000"
+const BASE_URL = "http://52.67.51.241:4000"
 const TOKENNAME = "@cdbl/session_user"
 
 export { BASE_URL, isUserLogged, getUser, logout, TOKENNAME };

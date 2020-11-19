@@ -18,7 +18,6 @@ import {
 } from "./pages";
 import { Header } from "./components/Header";
 import { Menu } from "./components/Menu";
-import Loading from "./components/Loading/Loading";
 import { Footer } from "./components/Footer";
 import { WIPNotice } from "./pages/WIPNotice";
 import { SecNotice } from "./pages/SecNotice";
@@ -26,16 +25,17 @@ import { ThNotice } from "./pages/ThNotice";
 import { FourNotice } from "./pages/FourNotice";
 import { FifthNotice } from "./pages/FifthNotice";
 import { SixthNotice } from "./pages/SixthNotice";
+import { BannerCrud } from "./pages/Admin"
 import logoCdbl from "./images/logo-cdbl.png";
 import { Helmet } from "react-helmet";
-import { SuspenseWithPerf} from 'reactfire';
+// import { SuspenseWithPerf} from 'reactfire';
 
 const history = createBrowserHistory();
 
 function App() {
   return (
     <div className="App">
-      <SuspenseWithPerf
+      {/* <SuspenseWithPerf
         fallback={<div
           style={{
             display: "flex",
@@ -45,7 +45,7 @@ function App() {
           <Loading />
         </div>}
         traceId={'load-status'}
-      >
+      > */}
       <Helmet>
         <meta charSet="utf-8" />
         <link rel="canonical" href="https://www.domboscoleste.com.br" />
@@ -202,6 +202,11 @@ function App() {
             />
             <Route
               exact={false}
+              path={"/admin/banners"}
+              component={(props) => <BannerCrud history={history} {...props}></BannerCrud>}
+            />
+            <Route
+              exact={false}
               path={"/login"}
               component={(props) => (
                 <Login history={history} {...props}></Login>
@@ -247,7 +252,7 @@ function App() {
           {/* <Footer /> */}
         </JsonBoxProvider>
       </HashRouter>
-      </SuspenseWithPerf>
+      {/* </SuspenseWithPerf> */}
     </div>
   );
 }

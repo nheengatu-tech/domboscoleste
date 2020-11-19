@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { tablet, laptop, xlaptop } from '../../_breakpoints'
+import { tablet } from '../../_breakpoints'
 
 const PartnerImg = styled.img`
   // filter: grayscale(0.5);

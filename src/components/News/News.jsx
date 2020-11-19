@@ -1,11 +1,8 @@
 import React from "react";
 import { Button, Component, TitleGrid, ImgNews, ContainerGrid } from "./styles";
 import { RiAddCircleLine } from "react-icons/ri";
-import editalBolsa from "../../images/edital-bolsa-2011.jpeg";
 import teatroCdbl from "../../images/teatro-cdbl.jpeg";
 import feiraCdbl from "../../images/voce-faz-a-feira.jpeg";
-// import campanhaMatricula from "../../images/matriculas2021.jpeg";
-import campanhaSetAmarelo from "../../images/dombosco-set-amarelo.jpeg";
 import semanaDaCrianca from "../../images/semana-da-crianca.jpeg";
 
 const HotNews = () => {

@@ -7,8 +7,8 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@material-ui/core";
-import PeopleIcon from "@material-ui/icons/People";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import ViewCarouselIcon from "@material-ui/icons/ViewCarousel";
 import PostAddIcon from "@material-ui/icons/PostAdd";
 import { logout } from "../../utils";
 
@@ -32,11 +32,11 @@ const Sidebar = (props) => {
             <ListItemText primary={"Postagens"} />
           </ListItem>
           <Divider />
-          <ListItem button onClick={() => props.history.push("/usuarios")}>
+          <ListItem button onClick={() => props.history.push("/admin/banners")}>
             <ListItemIcon>
-              <PeopleIcon />
+              <ViewCarouselIcon />
             </ListItemIcon>
-            <ListItemText primary={"Usuários"} />
+            <ListItemText primary={"Banners"} />
           </ListItem>
           <Divider />
           <ListItem

@@ -1,10 +1,6 @@
 import React from "react";
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  WhatsappShareButton,
-} from "react-share";
-import { GrFacebook, GrLinkedin } from "react-icons/gr";
+import { FacebookShareButton, WhatsappShareButton } from "react-share";
+import { GrFacebook } from "react-icons/gr";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { TitleContainer, Grid, BodyNotice } from "./styles";
 import feiraCdbl from "../../images/voce-faz-a-feira.jpeg";
