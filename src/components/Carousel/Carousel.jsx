@@ -5,6 +5,7 @@ import bannerListaMaterial from "../../images/baner-lista-de-material.jpeg";
 import bannerMatricula from "../../images/banner-matricula.jpeg";
 import bannerResultado from "../../images/banner-resultado.jpg";
 import bannerBlackWeek from "../../images/banner-blackweek.jpeg";
+import bannerLojaEdebe from "../../images/loja-edebe.jpeg";
 import { BASE_URL } from "../../utils";
 
 // const contentStyle = {
@@ -48,7 +49,7 @@ const CarouselList = () => {
 
   return (
     <Carousel autoplay>
-      {banners &&
+      {/* {banners &&
         banners.map((banner) => (
           <span
             key={banner._id}
@@ -64,8 +65,37 @@ const CarouselList = () => {
           >
             <Item src={banner.bannerImage} alt={banner.name} />
           </span>
-        ))}
-      {/* <span
+        ))} */}
+      <span
+        style={{
+          cursor: "pointer",
+          width: "100%",
+          display: "flex !important",
+          margin: "auto",
+          justifyContent: "center !important",
+        }}
+        onClick={() => window.open("https://loja.edebe.com.br/", "_blank")}
+      >
+        <Item src={bannerLojaEdebe} alt={"Loja Edebe"} />
+      </span>
+      <span
+        style={{
+          cursor: "pointer",
+          width: "100%",
+          display: "flex !important",
+          margin: "auto",
+          justifyContent: "center !important",
+        }}
+        onClick={() =>
+          window.open(
+            "https://web.whatsapp.com/send?phone=+5592992599150",
+            "_blank"
+          )
+        }
+      >
+        <Item src={bannerBlackWeek} alt={"Semana Black Week"} />
+      </span>
+      <span
         style={{
           cursor: "pointer",
           width: "100%",
@@ -115,7 +145,7 @@ const CarouselList = () => {
         }
       >
         <Item src={bannerMatricula} alt={"Banner de matricula 2021"} />
-      </span> */}
+      </span>
     </Carousel>
   );
 };
