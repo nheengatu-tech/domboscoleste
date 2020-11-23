@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "./static/css/main.dc0a14bb.chunk.css",
-    "main.js": "./static/js/main.3c413ed9.chunk.js",
-    "main.js.map": "./static/js/main.3c413ed9.chunk.js.map",
+    "main.js": "./static/js/main.ea882b19.chunk.js",
+    "main.js.map": "./static/js/main.ea882b19.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.f486c041.js",
     "runtime-main.js.map": "./static/js/runtime-main.f486c041.js.map",
     "static/css/2.6df4c8f8.chunk.css": "./static/css/2.6df4c8f8.chunk.css",
-    "static/js/2.922fb85b.chunk.js": "./static/js/2.922fb85b.chunk.js",
-    "static/js/2.922fb85b.chunk.js.map": "./static/js/2.922fb85b.chunk.js.map",
+    "static/js/2.c31347fd.chunk.js": "./static/js/2.c31347fd.chunk.js",
+    "static/js/2.c31347fd.chunk.js.map": "./static/js/2.c31347fd.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.055f02bf14f3d64007d637a0f71074b1.js": "./precache-manifest.055f02bf14f3d64007d637a0f71074b1.js",
+    "precache-manifest.64752ce26abf26eb7b9d7d9d22138e04.js": "./precache-manifest.64752ce26abf26eb7b9d7d9d22138e04.js",
     "service-worker.js": "./service-worker.js",
     "static/css/2.6df4c8f8.chunk.css.map": "./static/css/2.6df4c8f8.chunk.css.map",
     "static/css/main.dc0a14bb.chunk.css.map": "./static/css/main.dc0a14bb.chunk.css.map",
-    "static/js/2.922fb85b.chunk.js.LICENSE.txt": "./static/js/2.922fb85b.chunk.js.LICENSE.txt",
+    "static/js/2.c31347fd.chunk.js.LICENSE.txt": "./static/js/2.c31347fd.chunk.js.LICENSE.txt",
     "static/media/baner-lista-de-material.jpeg": "./static/media/baner-lista-de-material.38ad8160.jpeg",
     "static/media/banner-blackweek.jpeg": "./static/media/banner-blackweek.98456d76.jpeg",
     "static/media/banner-matricula.jpeg": "./static/media/banner-matricula.c4a657f1.jpeg",
@@ -24,6 +24,7 @@
     "static/media/isma.jpg": "./static/media/isma.bad59f12.jpg",
     "static/media/logo-cdbl.png": "./static/media/logo-cdbl.54c437c2.png",
     "static/media/logo-landing.png": "./static/media/logo-landing.cca1cffb.png",
+    "static/media/loja-edebe.jpeg": "./static/media/loja-edebe.f2fa0d5b.jpeg",
     "static/media/matriculas2021.jpeg": "./static/media/matriculas2021.705a3662.jpeg",
     "static/media/missa-fake-post.jpg": "./static/media/missa-fake-post.ec81f566.jpg",
     "static/media/rede-salesiana.png": "./static/media/rede-salesiana.565b18af.png",
@@ -36,8 +37,8 @@
   "entrypoints": [
     "static/js/runtime-main.f486c041.js",
     "static/css/2.6df4c8f8.chunk.css",
-    "static/js/2.922fb85b.chunk.js",
+    "static/js/2.c31347fd.chunk.js",
     "static/css/main.dc0a14bb.chunk.css",
-    "static/js/main.3c413ed9.chunk.js"
+    "static/js/main.ea882b19.chunk.js"
   ]
 }
