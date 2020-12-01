@@ -4,7 +4,7 @@ import { Button } from "../../components/Button";
 import { Form } from "@unform/web";
 import Snackbar from "@material-ui/core/Snackbar";
 import Alert from "@material-ui/lab/Alert";
-import { isUserLogged, BASE_URL, TOKENNAME } from "../../utils";
+import { isUserLogged, BASE_URL, TOKENNAME, logout } from "../../utils";
 import salesianaLogo from "../../images/rede-salesiana.png";
 import Loading from "../../components/Loading/Loading";
 
@@ -19,11 +19,12 @@ const Login = (props) => {
   useEffect(() => {
     if (isUserLogged()) {
       props.history.push("/usuarios");
+    } else {
+      // logout();
     }
   }, [props.history]);
 
   const submitForm = (data, { reset }) => {
-    console.log("submit");
     const body = { email: data.email, password: data.password };
     setLoading(true);
     fetch(BASE_URL + "/login", {

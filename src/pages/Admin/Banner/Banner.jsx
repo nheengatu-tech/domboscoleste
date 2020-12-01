@@ -98,8 +98,8 @@ const BannerCrud = (props) => {
   };
 
   const removeUser = async (id) => {
-    fetch(BASE_URL + "/banners" + id, {
-      method: "GET",
+    fetch(BASE_URL + "/banners/" + id, {
+      method: "DELETE",
       headers: {
         "x-access-token": localStorage.getItem(TOKENNAME),
       },
@@ -129,7 +129,6 @@ const BannerCrud = (props) => {
     formData.append("name", newBanner.name);
     formData.append("redirectUrl", newBanner.redirectUrl);
     formData.append("bannerImage", newBanner.bannerImage);
-    console.log(newBanner);
     if (newBanner.name && newBanner.redirectUrl && newBanner.bannerImage) {
       fetch(BASE_URL + "/banners", {
         method: "POST",
@@ -185,17 +184,17 @@ const BannerCrud = (props) => {
         >
           <CloseIcon width="50px" />
         </div>
-        {
-          <Snackbar
-            open={alert.isAlertOpen}
-            autoHideDuration={3500}
-            onClose={handleAlertClose}
-          >
-            <Alert severity={alert.status} onClose={handleAlertClose}>
-              {alert.message}
-            </Alert>
-          </Snackbar>
-        }
+        {/* { */}
+        <Snackbar
+          open={alert.isAlertOpen}
+          autoHideDuration={3500}
+          onClose={handleAlertClose}
+        >
+          <Alert severity={alert.status} onClose={handleAlertClose}>
+            {alert.message}
+          </Alert>
+        </Snackbar>
+        {/* } */}
         <DialogTitle id="form-dialog-title">Novo Banner</DialogTitle>
         <Form
           onSubmit={handleSubmit}
