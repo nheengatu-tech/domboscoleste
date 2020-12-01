@@ -18,7 +18,7 @@ const logout = () => {
 }
 
 // const BASE_URL = "http://localhost:4000"
-const BASE_URL = "http://52.67.51.241:4000"
+const BASE_URL = "https://api.domboscoleste.com.br"
 const TOKENNAME = "@cdbl/session_user"
 
 export { BASE_URL, isUserLogged, getUser, logout, TOKENNAME };
