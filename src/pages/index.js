@@ -6,7 +6,6 @@ import { Notice } from "./Notice";
 import { NoticeList } from "./NoticeList";
 import { Login } from "./Login";
 import { User } from "./User";
-import { Post } from "./Post";
 import { TotemHome } from "./Totem";
 
 export {
@@ -18,6 +17,5 @@ export {
   Notice,
   NoticeList,
   User,
-  Post,
   TotemHome,
 };

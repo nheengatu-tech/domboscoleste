@@ -13,7 +13,6 @@ import {
   Contact,
   Notice,
   NoticeList,
-  Post,
   TotemHome,
 } from "./pages";
 import { Header } from "./components/Header";
@@ -25,7 +24,7 @@ import { ThNotice } from "./pages/ThNotice";
 import { FourNotice } from "./pages/FourNotice";
 import { FifthNotice } from "./pages/FifthNotice";
 import { SixthNotice } from "./pages/SixthNotice";
-import { BannerCrud } from "./pages/Admin"
+import { BannerCrud, Post } from "./pages/Admin"
 import logoCdbl from "./images/logo-cdbl.png";
 import { Helmet } from "react-helmet";
 // import { SuspenseWithPerf} from 'reactfire';
