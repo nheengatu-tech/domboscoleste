@@ -143,7 +143,7 @@ const BannerCrud = (props) => {
           });
           setTimeout(() => {
             window.location.reload();
-          }, 1000);
+          }, 2500);
         })
         .catch(() => {
           setAlert({
