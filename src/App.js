@@ -104,7 +104,7 @@ function App() {
                 </>
               )}
             />
-            <Route
+            {/* <Route
               exact={true}
               path={"/noticias/edital-bolsas-2021-cdbl"}
               component={(props) => (
@@ -115,8 +115,8 @@ function App() {
                   <Footer />
                 </>
               )}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact={true}
               path={"/noticias/campanha-matriculas-2021"}
               component={(props) => (
@@ -127,8 +127,8 @@ function App() {
                   <Footer />
                 </>
               )}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact={true}
               path={"/noticias/campanha-setembro-amarelo-2020"}
               component={(props) => (
@@ -139,8 +139,8 @@ function App() {
                   <Footer />
                 </>
               )}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact={true}
               path={"/noticias/semana-da-crianca"}
               component={(props) => (
@@ -151,8 +151,8 @@ function App() {
                   <Footer />
                 </>
               )}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact={true}
               path={"/noticias/teatro-cdbl-ensino-medio"}
               component={(props) => (
@@ -163,8 +163,8 @@ function App() {
                   <Footer />
                 </>
               )}
-            />
-            <Route
+            /> */}
+            {/* <Route
               exact={true}
               path={"/noticias/voce-faz-a-feira"}
               component={(props) => (
@@ -175,7 +175,7 @@ function App() {
                   <Footer />
                 </>
               )}
-            />
+            /> */}
 
             <Route
               exact={false}

@@ -5,7 +5,7 @@ import editalBolsa from "../../images/edital-bolsa-2011.jpeg";
 import campanhaMatricula from "../../images/matriculas2021.jpeg";
 import { BASE_URL } from "../../utils"
 
-const NoticeList = () => {
+const NoticeList = (props) => {
   const [notices, setNotices] = useState("")
 
   const fetchNotices = () => {
@@ -106,8 +106,7 @@ const NoticeList = () => {
             </p>
             <button
               onClick={() =>
-                (window.location.href =
-                  "#/noticias/campanha-setembro-amarelo-2020")
+                (props.history.push("/noticias/" + notice.path))
               }
               style={{
                 height: "initial",

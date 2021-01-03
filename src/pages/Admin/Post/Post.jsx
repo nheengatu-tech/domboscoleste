@@ -9,9 +9,6 @@ import {
   IconButton,
   Fab,
   Grid,
-  Paper,
-  List,
-  ListItem,
   ListItemAvatar,
   ListItemText,
   ListItemSecondaryAction,
@@ -263,22 +260,40 @@ const Post = (props) => {
         <Grid item xs={2}></Grid>
         <Grid item xs={4}>
           <h2 style={{ margin: "64px" }}>Gerenciar Postagens</h2>
-          <Paper>
-            <List>
+          <div>
               {posts
                 ? posts.map((post, index) => (
-                    <ListItem key={index}>
-                      <ListItemAvatar>
-                        {/* <Avatar> */}
-                          {/* <PersonIcon /> */}
-                          <img src={post.postImage} alt={post.title} />
-                        {/* </Avatar> */}
-                      </ListItemAvatar>
+                    <div
+                      key={index}
+                      style={{
+                      display: "flex",
+                      width: "fit-content",
+                      margin: "32px",
+                      boxShadow:
+                        "0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)",
+                    }}>
+                      <div style={{
+                        display: "flex",
+                        flexDirection: "column",
+                      }}>
+                          <img style={{ height: "150px" }} src={post.postImage} alt={post.title} />
+                      </div>
                       <ListItemText
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          justifyContent: "center",
+                          margin: "8px"
+                        }}
                         primary={post.title}
                         secondary={`URL: ${post.path}`}
                       />
-                      <ListItemSecondaryAction>
+                      <div style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          justifyContent: "center",
+                          margin: "8px"
+                        }}>
                         <IconButton
                           onClick={() => removePost(post._id)}
                           edge="end"
@@ -286,12 +301,11 @@ const Post = (props) => {
                         >
                           <DeleteIcon />
                         </IconButton>
-                      </ListItemSecondaryAction>
-                    </ListItem>
+                      </div>
+                    </div>
                   ))
                 : null}
-            </List>
-          </Paper>
+          </div>
           <Fab color="primary" className={classes.fab} onClick={handleOpen}>
             <AddIcon />
           </Fab>

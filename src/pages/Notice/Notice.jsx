@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import useJsonBox from "react-jsonbox";
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -8,23 +7,51 @@ import {
 import { GrFacebook, GrLinkedin } from 'react-icons/gr'
 import { FaWhatsappSquare } from 'react-icons/fa'
 import { TitleContainer } from './styles'
-import missaForFakePost from '../../images/missa-fake-post.jpg'
+import { BASE_URL } from "../../utils"
+import ReactHtmlParser from 'react-html-parser'; 
+import { convertFromHTML, ContentState, convertToRaw } from 'draft-js'
 
 const Notice = (props) => {
-  const { read } = useJsonBox();
   const [notice, setNotice] = useState(null)
-  const urlTitle = props.match.params.title.replace(/-/g, " ") 
+  const urlTitle = props.match.params.title
+
 
   const fetchNotices = async() => {
-    const { data } = await read("posts")
-    data.map((notice) => {
-      console.log(notice);
-      if (notice.title === urlTitle) {
-        setNotice(notice)
-      }
-    })
+    fetch(BASE_URL + "/posts/" + urlTitle)
+      .then(res => res.json())
+      .then(data => setNotice(data[0]))
   }
 
+  const convertText = () => {
+    const sampleMarkup = notice.text
+    const contentHTML = convertFromHTML(sampleMarkup)
+    const state = ContentState.createFromBlockArray(contentHTML.contentBlocks, contentHTML.entityMap)
+    const content = JSON.stringify(convertToRaw(state))
+
+    // console.log('contentHTML -> ', contentHTML);
+    // console.log("state -> ", state);
+    // console.log("content -> ", content);
+    console.log(stringToHTML(notice.text));
+
+    return "contentHTML"
+  }
+
+  const stringToHTML = function (str) {
+
+    // If DOMParser is supported, use it
+    // if (support) {
+    //   var parser = new DOMParser();
+    //   var doc = parser.parseFromString(str, 'text/html');
+    //   return doc.body;
+    // }
+  
+    // Otherwise, fallback to old-school method
+    var dom = React.createElement('div', {}, str);
+    // var dom = document.createElement('div');
+    // dom.innerHTML = str;
+    return dom;
+  
+  };
 
   useEffect(() => {
     fetchNotices()
@@ -77,9 +104,9 @@ const Notice = (props) => {
             <div style={{ display: "flex" }}>
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <img style={{ width: "500px", height: "335px" }}
-                src={missaForFakePost} alt={"missa fake post"} />
+                src={notice.postImage} alt={"missa fake post"} />
                 {/* notice.image */}
-                <span>Missa Solene em Honra à Nossa Senhora Auxiliadora.</span>
+                {/* <span>Missa Solene em Honra à Nossa Senhora Auxiliadora.</span> */}
               </div>
               <div style={{ padding: "16px", display: "flex", flexDirection: "column" }}>
                 <h2 style={{
@@ -93,7 +120,8 @@ const Notice = (props) => {
                 >
                   {notice.title}
                 </h2>
-                <p>{notice.text}</p>
+                <div> {ReactHtmlParser(notice.text)} </div>
+                {/* <div>{stringToHTML(notice.text)}</div> */}
                 <div style={{ display: "flex" }}>
                   <span style={{
                     display: "flex",
