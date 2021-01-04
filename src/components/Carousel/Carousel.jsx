@@ -35,7 +35,7 @@ const CarouselList = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        data.reverse()
         setBanners(data);
       })
       .catch(() => {

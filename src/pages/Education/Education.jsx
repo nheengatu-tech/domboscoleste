@@ -59,7 +59,7 @@ const Education = () => {
           AMOR
           </strong>
           <br/>
-Quem percebe que é amado, tornar-se também capaz de sair de si e amar os outros, A presença Salesiana se identifica pelas atitudes de acolhida, bondade, alegria e fraternidade, que criam um lima de família. A afeição demonstrada é o “tempero” de tudo. Dom Bosco usava a palavra “amorevolezza” para indicar amor, carinho, afeição demonstrada, familiaridade, presença. A amarevolezza é uma energia espiritual, que nasce da mística do amor de Deus para os jovens.O COLÉGIO NOSSA SENHORA AUXILIADORA, dirigido pelas religiosas Filhas de Maria Auxiliadora (FMA) - Salesianas de Dom Bosco, juntamente com seus colaboradores leigos, norteia sua ação educativa pelos princípios do Sistema Preventivo de Dom Bosco, que são:
+Quem percebe que é amado, tornar-se também capaz de sair de si e amar os outros, A presença Salesiana se identifica pelas atitudes de acolhida, bondade, alegria e fraternidade, que criam um lima de família. A afeição demonstrada é o “tempero” de tudo. Dom Bosco usava a palavra “amorevolezza” para indicar amor, carinho, afeição demonstrada, familiaridade, presença. A amarevolezza é uma energia espiritual, que nasce da mística do amor de Deus para os jovens.O COLÉGIO DOM BOSCO, juntamente com seus colaboradores leigos, norteia sua ação educativa pelos princípios do Sistema Preventivo de Dom Bosco, que são:
           </p>
         <div style={{ color: "#1c3f95"}}>
           ______________________

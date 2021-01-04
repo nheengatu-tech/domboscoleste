@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { TitleContainer } from "./styles";
-import campanhaSetAmarelo from "../../images/dombosco-set-amarelo.jpeg";
-import editalBolsa from "../../images/edital-bolsa-2011.jpeg";
-import campanhaMatricula from "../../images/matriculas2021.jpeg";
 import { BASE_URL } from "../../utils"
 
 const NoticeList = (props) => {
@@ -11,7 +8,10 @@ const NoticeList = (props) => {
   const fetchNotices = () => {
      fetch(BASE_URL + "/posts")
      .then(res => res.json())
-     .then(data => setNotices(data))
+     .then(data => {
+        data.reverse()
+        setNotices(data)
+     })
   }
 
   useEffect(() => {
