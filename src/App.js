@@ -27,9 +27,42 @@ import { SixthNotice } from "./pages/SixthNotice";
 import { BannerCrud, Post } from "./pages/Admin"
 import logoCdbl from "./images/logo-cdbl.png";
 import { Helmet } from "react-helmet";
+import Manutencao from "./pages/Manutencao";
 // import { SuspenseWithPerf} from 'reactfire';
 
 const history = createBrowserHistory();
+
+function AppManutencao() {
+  return (
+    <div className="App">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <link rel="canonical" href="https://www.domboscoleste.com.br" />
+        <meta name="description" content="Parceria de Sucesso!" />
+        <meta property="og:title" content="Colégio Dom Bosco Leste"></meta>
+        <meta property="og:image" content={logoCdbl}></meta>
+      </Helmet>
+      <HashRouter basename="/">
+        <JsonBoxProvider
+          value={{ url: "https://jsonbox.io", id: "box_eab95f446b02b61b6379" }}
+        >
+          {/* <Header /> */}
+          {/* <Menu history={history} /> */}
+          <Switch>
+            <Route
+              exact={true}
+              path={"/**"}
+              component={(props) => (
+                <Manutencao/>
+              )}
+            />
+          </Switch>
+          {/* <Footer /> */}
+        </JsonBoxProvider>
+      </HashRouter>
+    </div>
+  );
+}
 
 function App() {
   return (
@@ -256,4 +289,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppManutencao;

@@ -7,12 +7,13 @@ const HotNews = () => {
   const [notices, setNotices] = useState("")
 
   const fetchNotices = () => {
-     fetch(BASE_URL + "/posts")
-     .then(res => res.json())
-     .then(data => {
-        data.reverse()
-        setNotices(data)
-     })
+      fetch(BASE_URL + "/posts")
+      .then(res => res.json())
+      .then(data => {
+         data.reverse()
+         setNotices(data)
+      })
+      .catch(err => console.log(err))
   }
 
   useEffect(() => {
