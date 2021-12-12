@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { TitleContainer } from "./styles";
+import "./styles.css";
 import { BASE_URL } from "../../utils"
 
 const NoticeList = (props) => {
@@ -11,7 +12,7 @@ const NoticeList = (props) => {
      .then(data => {
         data.reverse()
         setNotices(data)
-     })
+     }).catch(err => console.log(err))
   }
 
   useEffect(() => {
@@ -72,7 +73,7 @@ const NoticeList = (props) => {
           ÚLTIMAS <span style={{ fontWeight: "bolder" }}> NOTÍCIAS</span>
         </h2>
         {
-          notices &&
+          notices!== ""?
           notices.map(notice => (
           <div key={notice._id} style={{ display: "flex", margin: "16px 0" }}>
             <div style={{ display: "flex", flexDirection: "column" }}>
@@ -125,7 +126,11 @@ const NoticeList = (props) => {
             </button>
           </div>
         </div>
-          ))
+          )):(
+            <div className="loader-box">
+            <div className="loader"></div>
+          </div>
+            )
         }
       </div>
     </div>

@@ -1,0 +1,7 @@
+.box-logo{
+    border-radius: 16px;
+    transition: 0.28s ease;
+}
+.box-logo:hover{
+  border: solid 1px #2f66df !important;
+}
