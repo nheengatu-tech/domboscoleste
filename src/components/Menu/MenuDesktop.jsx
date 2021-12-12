@@ -1,12 +1,85 @@
-import React from "react";
+import React, {useRef, useState, useEffect} from "react";
 import { Link } from "react-router-dom";
-import { Container, NavItem } from "./styles";
+import { NavBar, NavItem } from "./styles";
+import { useLocation } from 'react-router-dom'
 import cdbLogo from "../../images/rede-salesiana.png";
+import "./styles.css"
+
+
+const useDetectOutsideClick = (el, initialState) => {
+  const [isActive, setIsActive] = useState(initialState);
+
+  useEffect(() => {
+    const pageClickEvent = (e) => {
+      // If the active element exists and is clicked outside of
+      if (el.current !== null && !el.current.contains(e.target)) {
+        setIsActive(!isActive);
+      }
+    };
+
+    // If the item is active (ie open) then listen for clicks
+    if (isActive) {
+      window.addEventListener('click', pageClickEvent);
+    }
+
+    return () => {
+      window.removeEventListener('click', pageClickEvent);
+    }
+
+  }, [isActive, el]);
+
+  return [isActive, setIsActive];
+}
+
+const DropdownMenu = ({children}) => {
+  const dropdownRef = useRef(null);
+  const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
+  const onClick = () => setIsActive(!isActive);
+
+
+  return (
+    <div className="menu-container">
+      <div onClick={onClick} className="menu-trigger">
+        {children}
+      </div>
+      <nav ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`}>
+        <ul>
+          <li><Link to="/ensino">Plano</Link></li>
+          {/* <li><Link to="/trips">Educação Infantil</Link></li>
+          <li><Link to="/saved">Ensino Fundamental</Link></li>
+          <li><Link to="/saved">Ensino Médio</Link></li> */}
+        </ul>
+      </nav>
+    </div>
+  );
+};
 
 const MenuDesktop = (props) => {
+  const location = useLocation();
+  console.log("Route: "+location.pathname.split('/')[1]);
+  const route = location.pathname.split('/')[1];
+
+  function isSelected(path) {
+    if (route === path) {
+      return "selectedNavItem";
+    }
+    return "";
+  }
+  
+
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
-      <div
+    <div style={{ 
+      display: "flex", 
+      width: "100%",
+      flexDirection: "column" ,
+      marginBottom: "20px",
+      zIndex: "9999",
+      boxShadow: "0px 5px 5px 0px rgba(0,0,0,0.2)",
+      // backgroundImage:"linear-gradient( to right,rgb(12,51,159) 0%,rgb(0,101,185) 100%)"}
+      background: "#fff",
+
+    }}>
+      {/* <div
         style={{
           fontSize: "24px",
           marginBottom: "-50px",
@@ -18,28 +91,51 @@ const MenuDesktop = (props) => {
       >
         <div>COLÉGIO DOM BOSCO LESTE</div>
         <div>MANAUS - AM</div>
-      </div>
-      <div style={{ display: "flex" }}>
-        <div style={{ margin: "16px" }}>
-          <img
-            style={{ maxWidth: "150px" }}
-            src={cdbLogo}
-            alt={"Logotipo Colégio Dom Bosco Leste"}
-          />
+      </div> */}
+      <div style={{ display: "flex", marginTop:"8px",justifyContent: 'center', alignItems: "center"}}>
+        <div style={{position:"absolute", left:"32px", top: "8px",  }}>
+          <Link className="box-logo" to="/" style={{
+            display: "flex", 
+            flexDirection:"row", 
+            alignItems: "center",
+            border: "solid 1px #2f66df30",
+            padding: "8px",
+            }}>
+            <img
+              style={{ maxWidth: "64px"}}
+              src={cdbLogo}
+              alt={"Logotipo Colégio Dom Bosco Leste"}
+            />
+            <h1 style={{
+              margin: "auto", 
+              marginLeft: "16px", 
+              fontSize: "1.6em", 
+              color: "#003094",
+              fontFamily: "Titillium Web, sans-serif"
+              }}>
+              Dom Bosco Leste
+            </h1>
+          </Link>
         </div>
-        <Container>
+        <NavBar>
           <div style={{ margin: "auto", display: "flex" }}>
-            <NavItem>
+            <NavItem className={isSelected("")}>
               <Link to="/">INICIO</Link>
             </NavItem>
-            <NavItem>
+            <NavItem className={isSelected("institucional")}>
               <Link to="/institucional">NOSSA ESCOLA</Link>
-            </NavItem>
-            <NavItem>
+            </NavItem >
+            <NavItem className={isSelected("noticias")}>
               <Link to="/noticias">NOTICIAS</Link>
             </NavItem>
-            <NavItem>
-              <Link to="/ensino">ENSINO</Link>
+            <DropdownMenu>
+              <NavItem className={isSelected("ensino")}> 
+                {/* <Link to="/ensino">ENSINO</Link> */}
+                <div>ENSINO</div>
+              </NavItem>
+            </DropdownMenu>
+            <NavItem className={isSelected("pastoral")}> 
+              <Link to="/pastoral">PASTORAL</Link>
             </NavItem>
             <NavItem>
               <span
@@ -54,11 +150,11 @@ const MenuDesktop = (props) => {
               </span>
               {/* <Link to="/">Galeria</Link> */}
             </NavItem>
-            <NavItem>
+            <NavItem className={isSelected("fale-conosco")}>
               <Link to="/fale-conosco">FALE CONOSCO</Link>
             </NavItem>
           </div>
-        </Container>
+        </NavBar>
       </div>
     </div>
   );

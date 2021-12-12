@@ -105,11 +105,11 @@ const Footer = () => {
       </Component>
     </Container>
     <YellonContainer>
-      Desenvolvido com ❤︎ por 
+      Suporte por 
       <Item
-        href="https://yellonpublicidade.com.br"
+        href="https://www.nheengatu.com/"
         target="blank">
-        Yellon Publicidade
+        Nheengatu Tech Solutions
       </Item>
     </YellonContainer>
   </>

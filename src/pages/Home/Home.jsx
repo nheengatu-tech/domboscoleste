@@ -4,15 +4,16 @@ import { HotNews } from '../../components/News';
 import { BannerSection } from '../../components/Banner'
 import { Partners } from '../../components/Partners'
 import { InstagramFeed } from '../../components/InstagramFeed'
-
+import Maps from '../../components/Maps';
 const Home = (props) => {
   return (
-    <div>
+    <div style={{flex:1, alignItems: 'center'}}>
       <CarouselList />
       <HotNews />
       <Partners />
       <BannerSection />
-      <InstagramFeed />
+      {/* <InstagramFeed /> */}
+      <Maps />
     </div>
   )
 }

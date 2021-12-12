@@ -69,10 +69,27 @@ const Container = styled.div`
   margin: auto 0;
 `
 
+const NavBar = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  & .selectedNavItem {
+    background-image: linear-gradient( to right, rgb(12,51,159) 0%, rgb(0,101,185) 100%);;
+    transition: 0.2s;
+    & * {
+      color: #fff;
+    }
+  }
+`
+
 const NavItem = styled.div`
-  margin: 16px;
-  color: white;
-  font-size: 12px;
+  padding: 16px;
+  color: black;
+  font-size: 14px;
+  border-radius: 8px 8px 0 0;
+  transition: 0.2s;
 
   > span {
     &:hover {
@@ -80,9 +97,11 @@ const NavItem = styled.div`
       color: #ffc20e;
     }
   }
-  
+  > * {
+    color: #313131;
+    padding: 0 12px;
+  }
   > a {
-    color: white;
     
     &:hover {
       cursor: pointer;
@@ -106,4 +125,4 @@ const MenuHamburg = styled.span`
   }
 `
 
-export { MenuMobileItem, MenuHamburg, Container, NavItem, DesktopViewport, MobileViewport }
+export { MenuMobileItem, MenuHamburg, NavBar, NavItem, DesktopViewport, MobileViewport }

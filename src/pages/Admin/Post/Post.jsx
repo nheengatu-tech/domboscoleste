@@ -108,6 +108,7 @@ const Post = (props) => {
   const handleSubmit = async (data, { reset }) => {
     const formData = new FormData();
     const newPost = { ...data, postImage: image, text: stateToHTML(text.getCurrentContent()) };
+    console.log(newPost);
     formData.append("title", newPost.title);
     formData.append("description", newPost.description);
     formData.append("text", newPost.text);
@@ -119,7 +120,8 @@ const Post = (props) => {
         "Content-Type": "multipart/form-data",
         body: formData,
       })
-        .then(() => {
+        .then((response) => {
+          console.log({response});
           generatePath("/noticia/:title", {
             title: newPost.url,
           });
@@ -129,7 +131,7 @@ const Post = (props) => {
             message: "Postagem criada com sucesso",
           });
           setTimeout(() => {
-            window.location.reload();
+            // window.location.reload();
           }, 2500);
         })
         .catch(() => {
@@ -147,9 +149,9 @@ const Post = (props) => {
       });
     }
 
-    reset();
-    setText("");
-    setImage(null);
+    // reset();
+    // setText("");
+    // setImage(null);
   };
 
   return (

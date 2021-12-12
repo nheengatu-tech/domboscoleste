@@ -14,55 +14,56 @@ import {
   Notice,
   NoticeList,
   TotemHome,
+  Pastoral
 } from "./pages";
 import { Header } from "./components/Header";
 import { Menu } from "./components/Menu";
 import { Footer } from "./components/Footer";
-import { WIPNotice } from "./pages/WIPNotice";
-import { SecNotice } from "./pages/SecNotice";
-import { ThNotice } from "./pages/ThNotice";
-import { FourNotice } from "./pages/FourNotice";
-import { FifthNotice } from "./pages/FifthNotice";
-import { SixthNotice } from "./pages/SixthNotice";
+// import { WIPNotice } from "./pages/WIPNotice";
+// import { SecNotice } from "./pages/SecNotice";
+// import { ThNotice } from "./pages/ThNotice";
+// import { FourNotice } from "./pages/FourNotice";
+// import { FifthNotice } from "./pages/FifthNotice";
+// import { SixthNotice } from "./pages/SixthNotice";
 import { BannerCrud, Post } from "./pages/Admin"
 import logoCdbl from "./images/logo-cdbl.png";
 import { Helmet } from "react-helmet";
-import Manutencao from "./pages/Manutencao";
+// import Manutencao from "./pages/Manutencao";
 // import { SuspenseWithPerf} from 'reactfire';
 
 const history = createBrowserHistory();
 
-function AppManutencao() {
-  return (
-    <div className="App">
-      <Helmet>
-        <meta charSet="utf-8" />
-        <link rel="canonical" href="https://www.domboscoleste.com.br" />
-        <meta name="description" content="Parceria de Sucesso!" />
-        <meta property="og:title" content="Colégio Dom Bosco Leste"></meta>
-        <meta property="og:image" content={logoCdbl}></meta>
-      </Helmet>
-      <HashRouter basename="/">
-        <JsonBoxProvider
-          value={{ url: "https://jsonbox.io", id: "box_eab95f446b02b61b6379" }}
-        >
-          {/* <Header /> */}
-          {/* <Menu history={history} /> */}
-          <Switch>
-            <Route
-              exact={true}
-              path={"/**"}
-              component={(props) => (
-                <Manutencao/>
-              )}
-            />
-          </Switch>
-          {/* <Footer /> */}
-        </JsonBoxProvider>
-      </HashRouter>
-    </div>
-  );
-}
+// function AppManutencao() {
+//   return (
+//     <div className="App">
+//       <Helmet>
+//         <meta charSet="utf-8" />
+//         <link rel="canonical" href="https://www.domboscoleste.com.br" />
+//         <meta name="description" content="Parceria de Sucesso!" />
+//         <meta property="og:title" content="Colégio Dom Bosco Leste"></meta>
+//         <meta property="og:image" content={logoCdbl}></meta>
+//       </Helmet>
+//       <HashRouter basename="/">
+//         <JsonBoxProvider
+//           value={{ url: "https://jsonbox.io", id: "box_eab95f446b02b61b6379" }}
+//         >
+//           {/* <Header /> */}
+//           {/* <Menu history={history} /> */}
+//           <Switch>
+//             <Route
+//               exact={true}
+//               path={"/**"}
+//               component={(props) => (
+//                 <Manutencao/>
+//               )}
+//             />
+//           </Switch>
+//           {/* <Footer /> */}
+//         </JsonBoxProvider>
+//       </HashRouter>
+//     </div>
+//   );
+// }
 
 function App() {
   return (
@@ -89,8 +90,6 @@ function App() {
         <JsonBoxProvider
           value={{ url: "https://jsonbox.io", id: "box_eab95f446b02b61b6379" }}
         >
-          {/* <Header /> */}
-          {/* <Menu history={history} /> */}
           <Switch>
             <Route
               exact={true}
@@ -257,6 +256,18 @@ function App() {
               )}
             />
             <Route
+              exact={true}
+              path={"/pastoral"}
+              component={(props) => (
+                <>
+                  <Header />
+                  <Menu history={history} />
+                  <Pastoral history={history} {...props}></Pastoral>
+                  <Footer />
+                </>
+              )}
+            />
+            <Route
               exact={false}
               path="/fale-conosco"
               component={(props) => (
@@ -289,4 +300,4 @@ function App() {
   );
 }
 
-export default AppManutencao;
+export default App;

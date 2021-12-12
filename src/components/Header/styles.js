@@ -5,7 +5,8 @@ const Container = styled.div`
   @media (max-width: ${mobile}) {
     display: none;
   }
-  background: #F2F2F2;
+  /* background-image: linear-gradient( to right, rgb(12,51,159) 0%, rgb(0,101,185) 100%); */
+  background-color: #FFF;
   height: 38px;
   display: flex;
   justify-content: flex-end;
@@ -13,7 +14,7 @@ const Container = styled.div`
 
 const Contact = styled.div`
   margin: auto 300px auto 20px;
-  color: #6d6d6d;
+  color: #313131;
 
   &:hover {
     cursor: pointer;
@@ -31,7 +32,7 @@ const ContactPanel = styled.div`
 `
 
 const ContactsComponent = styled.div`
-  color: #6D6D6D;
+  color: #000;
   padding: 4px;
   margin-top: 8px;
 `
@@ -42,11 +43,14 @@ const SocialMedia = styled.span`
   border: solid 2px #777;
   border-radius: 50%;
   padding: 4px;
+
+  color: #000;
+    border: solid 2px #00000030;
   
   &:hover {
     cursor: pointer;
-    color: rgb(12,51,159);
-    border: solid 2px rgb(12,51,159);
+    color: #000;
+    border: solid 2px #000;
   }
 `
 

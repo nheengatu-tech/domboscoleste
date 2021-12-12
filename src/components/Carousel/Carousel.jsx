@@ -7,6 +7,7 @@ import bannerResultado from "../../images/banner-resultado.jpg";
 import bannerBlackWeek from "../../images/banner-blackweek.jpeg";
 import bannerLojaEdebe from "../../images/loja-edebe.jpg";
 import { BASE_URL } from "../../utils";
+import "./styles.css"
 
 // const contentStyle = {
 //   height: '160px',
@@ -17,10 +18,11 @@ import { BASE_URL } from "../../utils";
 // };
 
 const Item = styled.img`
-  height: inherit;
+ min-height: 100%;
   cursor: pointer;
   display: flex;
-  width: 100%;
+  min-width: 100%;
+  width: auto;
   display: flex !important;
   justify-content: center;
 `;
@@ -48,8 +50,8 @@ const CarouselList = () => {
   }, [fetchBanners]);
 
   return (
-    <Carousel autoplay>
-      {banners &&
+    <Carousel style={{}} autoplay autoplaySpeed={6800} easing fade >
+      {banners!==null?
         banners.map((banner) => (
           <span
             key={banner._id}
@@ -65,7 +67,11 @@ const CarouselList = () => {
           >
             <Item src={banner.bannerImage} alt={banner.name} />
           </span>
-        ))}
+        )):(
+          <div className="loader-box">
+            <div className="loader"></div>
+          </div>
+        )}
       {/* <span
         style={{
           cursor: "pointer",

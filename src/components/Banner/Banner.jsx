@@ -19,7 +19,7 @@ const BannerSection = () => {
             fontSize: "32px",
             fontWeight: "bolder"
           }}>
-            66
+            67
           </span>
           <span style={{
             display: "flex",
@@ -43,7 +43,7 @@ const BannerSection = () => {
             fontSize: "32px",
             fontWeight: "bolder"
           }}>
-            +450
+            +510
           </span>
           <span style={{
             display: "flex",
@@ -63,7 +63,7 @@ const BannerSection = () => {
             fontSize: "32px",
             fontWeight: "bolder"
           }}>
-            29
+            30
           </span>
           <span style={{
             display: "flex",
