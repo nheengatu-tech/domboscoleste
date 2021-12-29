@@ -5,6 +5,30 @@ import { useLocation } from 'react-router-dom'
 import cdbLogo from "../../images/rede-salesiana.png";
 import "./styles.css"
 
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+
+export default function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return windowDimensions;
+}
+
+
 
 const useDetectOutsideClick = (el, initialState) => {
   const [isActive, setIsActive] = useState(initialState);
@@ -55,6 +79,10 @@ const DropdownMenu = ({children}) => {
 };
 
 const MenuDesktop = (props) => {
+
+
+  const { width } = useWindowDimensions();
+
   const location = useLocation();
   console.log("Route: "+location.pathname.split('/')[1]);
   const route = location.pathname.split('/')[1];
@@ -106,15 +134,18 @@ const MenuDesktop = (props) => {
               src={cdbLogo}
               alt={"Logotipo Colégio Dom Bosco Leste"}
             />
-            <h1 style={{
-              margin: "auto", 
-              marginLeft: "16px", 
-              fontSize: "1.6em", 
-              color: "#003094",
-              fontFamily: "Titillium Web, sans-serif"
-              }}>
-              Dom Bosco Leste
-            </h1>
+            { width>=1460? (
+
+              <h1 style={{
+                margin: "auto", 
+                marginLeft: "16px", 
+                fontSize: "1.6em", 
+                color: "#003094",
+                fontFamily: "Titillium Web, sans-serif"
+                }}>
+                Dom Bosco Leste
+              </h1>
+            ):null}
           </Link>
         </div>
         <NavBar>

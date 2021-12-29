@@ -96,8 +96,10 @@ function App() {
               path={"/"}
               component={(props) => (
                 <>
-                  <Header />
-                  <Menu history={history} />
+                  <div className="fixed">
+                    <Header />
+                    <Menu history={history} />
+                  </div>
                   <Home history={history} {...props}></Home>
                   <Footer />
                 </>
@@ -108,8 +110,10 @@ function App() {
               path={"/institucional"}
               component={(props) => (
                 <>
-                  <Header />
-                  <Menu history={history} />
+                  <div className="fixed">
+                    <Header />
+                    <Menu history={history} />
+                  </div>
                   <AboutUs history={history} {...props}></AboutUs>
                   <Footer />
                 </>
@@ -129,8 +133,10 @@ function App() {
               path={"/noticias"}
               component={(props) => (
                 <>
-                  <Header />
-                  <Menu history={history} />
+                  <div className="fixed">
+                    <Header />
+                    <Menu history={history} />
+                  </div>
                   <NoticeList history={history} {...props}></NoticeList>
                   <Footer />
                 </>
@@ -214,8 +220,10 @@ function App() {
               path={"/noticias/:title"}
               component={(props) => (
                 <>
-                  <Header />
-                  <Menu history={history} />
+                  <div className="fixed">
+                    <Header />
+                    <Menu history={history} />
+                  </div>
                   <Notice history={history} {...props}></Notice>
                   <Footer />
                 </>
@@ -248,8 +256,10 @@ function App() {
               path="/ensino"
               component={(props) => (
                 <>
-                  <Header />
-                  <Menu history={history} />
+                  <div className="fixed">
+                    <Header />
+                    <Menu history={history} />
+                  </div>
                   <Education history={history} {...props}></Education>
                   <Footer />
                 </>
@@ -260,8 +270,10 @@ function App() {
               path={"/pastoral"}
               component={(props) => (
                 <>
-                  <Header />
-                  <Menu history={history} />
+                  <div className="fixed">
+                    <Header />
+                    <Menu history={history} />
+                  </div>
                   <Pastoral history={history} {...props}></Pastoral>
                   <Footer />
                 </>
@@ -272,8 +284,10 @@ function App() {
               path="/fale-conosco"
               component={(props) => (
                 <>
-                  <Header />
-                  <Menu history={history} />
+                  <div className="fixed">
+                    <Header />
+                    <Menu history={history} />
+                  </div>
                   <Contact history={history} {...props}></Contact>
                   <Footer />
                 </>
@@ -284,8 +298,10 @@ function App() {
               path="/fake-post"
               component={(props) => (
                 <>
-                  <Header />
-                  <Menu history={history} />
+                  <div className="fixed">
+                    <Header />
+                    <Menu history={history} />
+                  </div>
                   <Notice history={history} {...props}></Notice>
                   <Footer />
                 </>
