@@ -19,7 +19,7 @@ const KinderGarten = () => {
                     <BodyNotice>
                         <h4 style={{
                             color: "#333399",
-                            fontSize: "20px",
+                            fontSize: "1.8rem",
                             fontWeight: "bold",
                             fontFamily: 'Dekar, sans-serif',
                         }}>
