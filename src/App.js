@@ -30,6 +30,7 @@ import { Footer } from "./components/Footer";
 import { BannerCrud, Post } from "./pages/Admin"
 import logoCdbl from "./images/logo-cdbl.png";
 import { Helmet } from "react-helmet";
+import { KinderGarten } from "./pages/KinderGarten";
 // import Manutencao from "./pages/Manutencao";
 // import { SuspenseWithPerf} from 'reactfire';
 
@@ -277,6 +278,20 @@ function App() {
                     <Menu history={history} />
                   </div>
                   <Medio history={history} {...props}></Medio>
+                  <Footer />
+                </>
+              )}
+            />
+            <Route
+              exact={false}
+              path="/infantil"
+              component={(props) => (
+                <>
+                  <div className="fixed">
+                    <Header />
+                    <Menu history={history} />
+                  </div>
+                  <KinderGarten history={history} {...props}></KinderGarten>
                   <Footer />
                 </>
               )}
