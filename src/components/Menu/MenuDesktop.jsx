@@ -69,9 +69,9 @@ const DropdownMenu = ({children}) => {
       <nav ref={dropdownRef} className={`menu ${isActive ? 'active' : 'inactive'}`}>
         <ul>
           <li><Link to="/ensino">Plano</Link></li>
-          {/* <li><Link to="/trips">Educação Infantil</Link></li>
-          <li><Link to="/saved">Ensino Fundamental</Link></li>
-          <li><Link to="/saved">Ensino Médio</Link></li> */}
+          <li><Link to="/infantil">Educação Infantil</Link></li>
+          <li><Link to="/noticias">Ensino Fundamental</Link></li>
+          <li><Link to="/saved">Ensino Médio</Link></li> 
         </ul>
       </nav>
     </div>

@@ -3,7 +3,7 @@ import { TitleContainer, Grid, BodyNotice } from './styles'
 import shadLista from '../../images/shad-lista.png'
 
 const Education = () => {
-  return(
+  return( 
     <div>
       <TitleContainer>
         <Grid>
