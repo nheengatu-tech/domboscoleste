@@ -1,6 +1,7 @@
 import { Home } from "./Home";
 import { AboutUs } from "./AboutUs";
 import { Education } from "./Education";
+import { Medio } from "./Education";
 import { Contact } from "./Contact";
 import { Notice } from "./Notice";
 import { NoticeList } from "./NoticeList";
@@ -20,4 +21,5 @@ export {
   User,
   TotemHome,
   Pastoral,
+  Medio,
 };

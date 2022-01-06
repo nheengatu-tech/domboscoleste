@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 import React from "react";
 import "./App.css";
 import "antd/dist/antd.css";
@@ -10,6 +11,7 @@ import {
   Home,
   AboutUs,
   Education,
+  Medio,
   Contact,
   Notice,
   NoticeList,
@@ -261,6 +263,20 @@ function App() {
                     <Menu history={history} />
                   </div>
                   <Education history={history} {...props}></Education>
+                  <Footer />
+                </>
+              )}
+            />
+            <Route
+              exact={false}
+              path="/medio"
+              component={(props) => (
+                <>
+                  <div className="fixed">
+                    <Header />
+                    <Menu history={history} />
+                  </div>
+                  <Medio history={history} {...props}></Medio>
                   <Footer />
                 </>
               )}
