@@ -14,7 +14,9 @@ import {
   Notice,
   NoticeList,
   TotemHome,
-  Pastoral
+  Pastoral,
+  BasicEducation,
+  KinderGarten
 } from "./pages";
 import { Header } from "./components/Header";
 import { Menu } from "./components/Menu";
@@ -28,7 +30,6 @@ import { Footer } from "./components/Footer";
 import { BannerCrud, Post } from "./pages/Admin"
 import logoCdbl from "./images/logo-cdbl.png";
 import { Helmet } from "react-helmet";
-import { KinderGarten } from "./pages/KinderGarten";
 // import Manutencao from "./pages/Manutencao";
 // import { SuspenseWithPerf} from 'reactfire';
 
@@ -257,7 +258,7 @@ function App() {
               path="/ensino"
               component={(props) => (
                 <>
-                  <div className="fixed">
+                  <div className="fixed"> 
                     <Header />
                     <Menu history={history} />
                   </div>
@@ -276,6 +277,20 @@ function App() {
                     <Menu history={history} />
                   </div>
                   <KinderGarten history={history} {...props}></KinderGarten>
+                  <Footer />
+                </>
+              )}
+            />
+            <Route
+              exact={false}
+              path="/fundamental"
+              component={(props) => (
+                <>
+                  <div className="fixed">
+                    <Header />
+                    <Menu history={history} />
+                  </div>
+                  <BasicEducation history={history} {...props}></BasicEducation>
                   <Footer />
                 </>
               )}

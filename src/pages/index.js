@@ -7,6 +7,8 @@ import { NoticeList } from "./NoticeList";
 import { Login } from "./Login";
 import { User } from "./User";
 import { TotemHome } from "./Totem";
+import { BasicEducation } from "./BasicEducation";
+import { KinderGarten } from "./KinderGarten";
 import Pastoral from "./Patoral";
 
 export {
@@ -20,4 +22,6 @@ export {
   User,
   TotemHome,
   Pastoral,
+  BasicEducation,
+  KinderGarten
 };
