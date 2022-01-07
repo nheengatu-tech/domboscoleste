@@ -1,4 +1,5 @@
 import React from "react";
+import { MdArrowDropDown } from 'react-icons/md'
 import './styles.css'
 
 const PreMatricula = () => {
@@ -43,19 +44,19 @@ const PreMatricula = () => {
         {/*DIV DROPITENS*/}
         <div className="flex_row drop-itens">
           <div className="test">
-            ▼
+            <MdArrowDropDown className="icon"/>
           </div>
           <p className="bold no-margin">Mensalidade</p>
 
           <div className="test">
-            ▼
+            <MdArrowDropDown className="icon"/>
           </div>
           <p className="bold no-margin">
             Documento para matrícula
           </p>
 
           <div className="test">
-            ▼
+            <MdArrowDropDown className="icon"/>
           </div>
           <p className="bold no-margin">
             Informações curriculares

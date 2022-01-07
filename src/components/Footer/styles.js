@@ -10,16 +10,7 @@ const Container = styled.div`
   bottom: 0;
   width: 100%;
 
-  @media (min-width: ${mobile}) {
-    margin: 16px auto auto auto;
-    // height: 260px;
-    border-top-right-radius: 150px;
-    border-top-left-radius: 150px;
-  }
-  
-  @media (min-width: ${xlaptop}) {
-    width: 80%;
-  }
+  margin: 0 auto auto auto;
 `
 
 const Component = styled.div`
@@ -76,7 +67,7 @@ const YellonContainer = styled.div`
   justify-content: center;
 
   @media (min-width: ${xlaptop}) {
-    width: 80%;
+    width: 100%;
   }
 `
 
