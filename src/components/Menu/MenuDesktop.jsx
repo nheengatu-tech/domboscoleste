@@ -70,8 +70,8 @@ const DropdownMenu = ({children}) => {
         <ul>
           <li><Link to="/ensino">Plano</Link></li>
           <li><Link to="/infantil">Educação Infantil</Link></li>
-          <li><Link to="/fundamental">Ensino Fundamental</Link></li>
-          <li><Link to="/saved">Ensino Médio</Link></li> 
+          <li><Link to="/noticias">Ensino Fundamental</Link></li>
+          <li><Link to="/medio">Ensino Médio</Link></li> 
         </ul>
       </nav>
     </div>

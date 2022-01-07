@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 import React from "react";
 import "./App.css";
 import "antd/dist/antd.css";
@@ -16,7 +17,6 @@ import {
   TotemHome,
   Pastoral,
   BasicEducation,
-  KinderGarten
 } from "./pages";
 import { Header } from "./components/Header";
 import { Menu } from "./components/Menu";
@@ -30,6 +30,8 @@ import { Footer } from "./components/Footer";
 import { BannerCrud, Post } from "./pages/Admin"
 import logoCdbl from "./images/logo-cdbl.png";
 import { Helmet } from "react-helmet";
+import { KinderGarten } from "./pages/Education/KinderGarten";
+import { HighSchool } from "./pages/Education/HighSchool";
 // import Manutencao from "./pages/Manutencao";
 // import { SuspenseWithPerf} from 'reactfire';
 
@@ -263,6 +265,20 @@ function App() {
                     <Menu history={history} />
                   </div>
                   <Education history={history} {...props}></Education>
+                  <Footer />
+                </>
+              )}
+            />
+            <Route
+              exact={false}
+              path="/medio"
+              component={(props) => (
+                <>
+                  <div className="fixed">
+                    <Header />
+                    <Menu history={history} />
+                  </div>
+                  <HighSchool history={history} {...props}></HighSchool>
                   <Footer />
                 </>
               )}

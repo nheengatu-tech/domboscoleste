@@ -1,23 +1,24 @@
 import React from 'react'
 import { Card } from '../../components/Card'
-import './styles.css';
+import { BodyNotice } from './styles'
+
 import cards from './cards'
 
 const KinderGarten = () => {
 
     return (
-
+        
         <div style={{ display: "flex", flexDirection: "column", margin: "auto" }}>
 
             {/*DIV BANNER*/}
-            <div className='banner'>
+            <div style={{ width: "100%", height: "250px", display: "flex", backgroundColor: "gray", justifyContent: "center", alignItems: "center" }}>
                 <h1 style={{ color: "black" }}>BANNER</h1>
             </div>
 
             {/*DIV CONTÉUDO*/}
-            <div className='flex_row' style={{ width: "100%", height: "", justifyContent: "center", alignItems: "flex-start", margin: "auto" }}>
-                <div className='flex_column' style={{ width: "40%", height: "100%", justifyContent: "flex-start", alignItems: "flex-start" }}>
-                    <div className='body_notice'>
+            <div style={{ width: "100%", height: "", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "flex-start", margin: "auto" }}>
+                <div style={{ width: "40%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "flex-start" }}>
+                    <BodyNotice>
                         <h4 style={{
                             color: "#333399",
                             fontSize: "1.8rem",
@@ -43,21 +44,22 @@ const KinderGarten = () => {
                                 consta no Referencial Curricular da Educação Infantil.
                             </p>
                         </div>
-                    </div>
+                    </BodyNotice>
+
                 </div>
-                <div className='div_image'>
+                <div style={{ marginLeft: "16px", position: "relative", top: "-80px", width: "30%", height: "400px", backgroundColor: "brown", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
                     <h1 style={{ color: "black" }}>IMAGE</h1>
                 </div>
             </div>
 
             {/*TITLE*/}
             <h1 style={{ padding: "48px", fontWeight: "bold" }}>Áreas de Conhecimento</h1>
-
+            
             {/*DIV CARD*/}
-            <div className='flex_column' style={{ flexDirection: "column", alignItems: "flex-start", margin: "auto" }}>
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", margin: "auto" }}>
 
                 <div style={{ width: "100%", display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center" }}>
-                    {cards !== null ? cards.map((card, cardKey) => (
+                    {cards!==null? cards.map((card, cardKey) => (
                         <Card key={cardKey} title={card.title}>
                             <ul style={{ marginTop: "10px", alignSelf: "flex-start", textAlign: "start" }}>
                                 {card.itens.map((item, itemKey) => (
@@ -65,9 +67,9 @@ const KinderGarten = () => {
                                 ))}
                             </ul>
                         </Card>
-                    )) : null}
+                    )): null}
 
-
+                    
                 </div>
             </div>
         </div>

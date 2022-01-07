@@ -10,6 +10,7 @@ import { TotemHome } from "./Totem";
 import { BasicEducation } from "./BasicEducation";
 import { KinderGarten } from "./KinderGarten";
 import Pastoral from "./Patoral";
+import HighSchool from "./Education/HighSchool/HighSchool";
 
 export {
   Login,
@@ -23,5 +24,6 @@ export {
   TotemHome,
   Pastoral,
   BasicEducation,
-  KinderGarten
+  KinderGarten,
+  HighSchool,
 };
