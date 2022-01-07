@@ -11,6 +11,7 @@ import { BasicEducation } from "./BasicEducation";
 import Pastoral from "./Patoral";
 import HighSchool from "./Education/HighSchool/HighSchool";
 import KinderGarten from "./Education/KinderGarten/KinderGarten";
+import PreMatricula from "./PreMatricula/PreMatricula";
 
 export {
   Login,
@@ -26,4 +27,5 @@ export {
   BasicEducation,
   HighSchool,
   KinderGarten,
+  PreMatricula,
 };

@@ -1,39 +1,51 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif ;
+  margin-top: 98px !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media only screen and (max-width: 767px) {
+  body {
+    margin-top: 70px !important;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  body {
+    margin-top: 30px !important;
+  }
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.ant-carousel .slick-dots{
+.ant-carousel .slick-dots {
   top: 12px;
 }
 
-.ant-carousel .slick-dots .slick-active button{
+.ant-carousel .slick-dots .slick-active button {
   background-image: linear-gradient(to right, #2fece3, #30add3) !important;
 }
 
-.ant-carousel .slick-dots li{
+.ant-carousel .slick-dots li {
   border: 1px solid rgb(27, 47, 158, 0.5);
   width: 16px !important;
   height: 16px !important;
-  border-radius: 16px !important; 
+  border-radius: 16px !important;
 }
 
-.ant-carousel .slick-dots li button{
+.ant-carousel .slick-dots li button {
   width: 100%;
   height: 100% !important;
-  border-radius: 16px !important; 
+  border-radius: 16px !important;
 }
 
-.fixed{
+.fixed {
   top: 0;
   width: 100%;
   display: block;

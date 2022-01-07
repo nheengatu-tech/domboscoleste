@@ -32,6 +32,7 @@ import logoCdbl from "./images/logo-cdbl.png";
 import { Helmet } from "react-helmet";
 import { KinderGarten } from "./pages/Education/KinderGarten";
 import { HighSchool } from "./pages/Education/HighSchool";
+import PreMatricula  from "./pages/PreMatricula/PreMatricula";
 // import Manutencao from "./pages/Manutencao";
 // import { SuspenseWithPerf} from 'reactfire';
 
@@ -307,6 +308,20 @@ function App() {
                     <Menu history={history} />
                   </div>
                   <BasicEducation history={history} {...props}></BasicEducation>
+                  <Footer />
+                </>
+              )}
+            />
+            <Route
+              exact={true}
+              path={"/preMatricula"}
+              component={(props) => (
+                <>
+                  <div className="fixed">
+                    <Header />
+                    <Menu history={history} />
+                  </div>
+                  <PreMatricula history={history} {...props}></PreMatricula>
                   <Footer />
                 </>
               )}

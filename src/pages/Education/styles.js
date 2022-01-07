@@ -105,15 +105,6 @@ export const Banner = styled.div`
   background-color: gray;
   justify-content: center;
   align-items: center;
-  margin-top: 98px;
-
-  @media only screen and (max-width: 767px) {
-    margin-top: 70px;
-  }
-
-  @media only screen and (max-width: 750px) {
-    margin-top: 30px;
-  }
 `;
 
 export const Content = styled.div`

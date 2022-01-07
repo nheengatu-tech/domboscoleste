@@ -181,6 +181,9 @@ const MenuDesktop = (props) => {
               </span>
               {/* <Link to="/">Galeria</Link> */}
             </NavItem>
+            <NavItem className={isSelected("pre-matricula")}>
+              <Link to="/pre-matricula">PRÉ-MATRÍCULA</Link>
+            </NavItem>
             <NavItem className={isSelected("fale-conosco")}>
               <Link to="/fale-conosco">FALE CONOSCO</Link>
             </NavItem>
