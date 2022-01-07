@@ -108,14 +108,14 @@ export const Container = styled.div`
 
 export const Banner = styled.div`
   width: 100%;
-  height: 250px;
+  height: 400px;
   display: flex;
   background-color: gray;
   justify-content: center;
   align-items: center;
 
   .cover{
-    object-fit:cover;
+    object-fit: cover;
   }
 `;
 

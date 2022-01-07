@@ -14,9 +14,9 @@ const HighSchool = () => {
   return (
     <Container>
       <Banner>
-        <img id="fileImage" src={banner} alt="banner" />
+      <img className="cover" id="fileImage" src={banner} alt="banner" />
       </Banner>
-      <Content>
+      <Content className="shadow-content">
         <ContainerText>
           <div className="text">
             <div className="title">Ensino Médio</div>
@@ -50,7 +50,7 @@ const HighSchool = () => {
               </p>
             </div>
           </div>
-          <div className="image">
+          <div className="image shadow-image">
             <img id="fileImage" src="https://www.otaboanense.com.br/wp-content/uploads/2019/05/ensino_medio_grafico.jpg" alt="imagem"/>
           </div>
         </ContainerText>
