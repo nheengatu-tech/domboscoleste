@@ -14,9 +14,9 @@ const KinderGarten = () => {
   return (
     <Container>
       <Banner>
-        <img id="fileImage" src={banner} alt="banner" />
+        <img className="cover" id="fileImage" src={banner} alt="banner" />
       </Banner>
-      <Content>
+      <Content className="shadow-content">
         <ContainerText>
           <div className="text">
             <div className="title">Ensino Infantil</div>
@@ -40,8 +40,9 @@ const KinderGarten = () => {
               </p>
             </div>
           </div>
-          <div className="image">
+          <div className="image shadow-image">
             <img
+
               id="fileImage"
               src="https://www.otaboanense.com.br/wp-content/uploads/2019/05/ensino_medio_grafico.jpg"
               alt="imagem"
@@ -53,14 +54,14 @@ const KinderGarten = () => {
           <div className="cardDeck">
             {cards !== null
               ? cards.map((card, cardKey) => (
-                  <ElementCard key={cardKey} title={card.title}>
-                    <div className="item">
-                      {card.itens.map((item, itemKey) => (
-                        <li key={itemKey}>{item}</li>
-                      ))}
-                    </div>
-                  </ElementCard>
-                ))
+                <ElementCard key={cardKey} title={card.title}>
+                  <div className="item">
+                    {card.itens.map((item, itemKey) => (
+                      <li key={itemKey}>{item}</li>
+                    ))}
+                  </div>
+                </ElementCard>
+              ))
               : null}
           </div>
         </ContainerCard>

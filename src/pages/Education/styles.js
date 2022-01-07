@@ -79,6 +79,14 @@ export const Container = styled.div`
     border-radius: 3%;
   }
 
+  .shadow-image{
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.15);
+  }
+
+  .shadow-content{
+    box-shadow: 0px -1px 5px 3px rgba(0, 0, 0, 0.05);
+  }
+
   #fileImage {
     border-radius: inherit;
     height: 100%;
@@ -105,11 +113,15 @@ export const Banner = styled.div`
   background-color: gray;
   justify-content: center;
   align-items: center;
+
+  .cover{
+    object-fit:cover;
+  }
 `;
 
 export const Content = styled.div`
   display: block;
-  margin: 0px 36px 36px 36px;
+  padding: 0px 36px 36px 36px;
 `;
 
 export const ContainerText = styled.div`
@@ -130,7 +142,7 @@ export const ContainerText = styled.div`
     font-size: 16px;
 
     .title {
-      color: black;
+      color: #222;
       font-size: 48px;
       font-weight: bold;
       font-family: Dekar, sans-serif;
@@ -153,8 +165,8 @@ export const ContainerCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 16px;
-
+  text-align: center;
+  
   @media only screen and (max-width: 810px) {
     .cardDeck {
       flex-direction: column;
@@ -170,9 +182,11 @@ export const ContainerCard = styled.div`
     font-size: 16px;
 
     .item {
-      margin: 2rem;
+      width: 100%;
+      margin: 0px;
+      margin-bottom: 3rem;
       align-self: flex-start;
-      text-align: justify;
+      text-align: center;
 
       li {
         margin-bottom: 8px;
@@ -185,5 +199,6 @@ export const ContainerCard = styled.div`
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 24px;
+    color: #222;
   }
 `;

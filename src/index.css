@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 90vh !important;
+  height: auto !important;
 }
 
 @media only screen and (max-width: 767px) {
@@ -52,3 +54,4 @@ code {
   position: fixed;
   z-index: 1;
 }
+
