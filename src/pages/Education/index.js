@@ -1,4 +1,4 @@
 import Education from './Education'
-import Medio from './Medio'
+import HighSchool from './HighSchool/HighSchool'
 
-export { Education, Medio }
+export { Education, HighSchool }

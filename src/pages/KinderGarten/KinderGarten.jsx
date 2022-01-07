@@ -2,8 +2,10 @@ import React from 'react'
 import { Card } from '../../components/Card'
 import { BodyNotice } from './styles'
 
+import cards from './cards'
 
 const KinderGarten = () => {
+
     return (
         
         <div style={{ display: "flex", flexDirection: "column", margin: "auto" }}>
@@ -19,7 +21,7 @@ const KinderGarten = () => {
                     <BodyNotice>
                         <h4 style={{
                             color: "#333399",
-                            fontSize: "20px",
+                            fontSize: "1.8rem",
                             fontWeight: "bold",
                             fontFamily: 'Dekar, sans-serif',
                         }}>
@@ -57,53 +59,17 @@ const KinderGarten = () => {
             <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", margin: "auto" }}>
 
                 <div style={{ width: "100%", display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center" }}>
-                    <Card title="Comunicação e Expressão">
-                        <ul style={{ marginTop: "10px", alignSelf: "flex-start", textAlign: "start" }}>
-                            <li>Oralidade</li>
-                            <li>Expressão Corporal</li>
-                            <li>Expressão Plastica</li>
-                            <li>Expressão Grafica</li>
-                        </ul>
-                    </Card>
-                    <Card title="Pensamento Lógico Matemático">
-                        <ul style={{ marginTop: "10px", alignSelf: "flex-start", textAlign: "start" }}>
-                            <li>Construção de conhecimento lógico-matemático</li>
-                            <li>Capacidade de analisar e levantar hipóteses</li>
-                            <li>Capacidade de questionar e ser criativo</li>
-                        </ul>
-                    </Card>
-                    <Card title="Conhecimentos do Mundo Físico e Social">
-                        <ul style={{ marginTop: "10px", alignSelf: "flex-start", textAlign: "start" }}>
-                            <li>Realidade física e social através de confronto de ideias e levantamento de hipóteses</li>
-                            <li>Conhecimentos e valorização da cultura e do meio ambiente</li>
-                            <li>Valorização de si mesmo, do próximo e do meio</li>
-                        </ul>
-                    </Card>
-                    <Card title="Saúde e Nutrição">
-                        <ul style={{ marginTop: "10px", alignSelf: "flex-start", textAlign: "start" }}>
-                            <li>Conhecimentos sobre o corpo</li>
-                            <li>Valorização de hábitos saudáveis</li>
-                            <li>Responsabilidade com a saúde de si mesmo e dos outros</li>
-                        </ul>
-                    </Card>
-                    <Card title="Valores e Religiosidade ">
-                        <ul style={{ marginTop: "10px", alignSelf: "flex-start", textAlign: "start" }}>
-                            <li>Participação</li>
-                            <li>Cooperação</li>
-                            <li>Solidariedade</li>
-                            <li>Cooperativismo</li>
-                            <li>Respeito</li>
-                            <li>Justiça</li>
-                        </ul>
-                    </Card>
-                    <Card title="Atividade Recreativa e Pedagógica ">
-                        <ul style={{ marginTop: "10px", alignSelf: "flex-start", textAlign: "start" }}>
-                            <li>Atividades educativas focadas na motricidade</li>
-                            <li>Expressão artística e ampliação de conhecimento do mundo e da cultura</li>
-                            <li>Ampliação de conhecimento do mundo e da cultura</li>
-                        </ul>
-                    </Card>
+                    {cards!==null? cards.map((card, cardKey) => (
+                        <Card key={cardKey} title={card.title}>
+                            <ul style={{ marginTop: "10px", alignSelf: "flex-start", textAlign: "start" }}>
+                                {card.itens.map((item, itemKey) => (
+                                    <li key={itemKey}>{item}</li>
+                                ))}
+                            </ul>
+                        </Card>
+                    )): null}
 
+                    
                 </div>
             </div>
         </div>

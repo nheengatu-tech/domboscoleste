@@ -1,29 +1,29 @@
-import styled from 'styled-components'
-import { tablet } from '../../_breakpoints'
+import styled from "styled-components";
+import { tablet } from "../../_breakpoints";
 
 export const Grid = styled.div`
   width: 70%;
   display: flex;
   flex-direction: column;
   margin: auto;
-  
+
   @media (min-width: ${tablet}) {
     flex-direction: row;
   }
-`
-  
+`;
+
 export const BodyNotice = styled.div`
   display: flex;
   flex-direction: column;
   margin: auto;
   text-align: justify;
   padding: 24px;
-  
+
   @media (min-width: ${tablet}) {
     width: 70%;
     padding: 48px;
   }
-`
+`;
 
 export const TitleContainer = styled.div`
   display: flex;
@@ -31,11 +31,11 @@ export const TitleContainer = styled.div`
   background: #f4f4f4;
   position: relative;
   overflow: hidden;
-  font-family: 'Dekar', sans-serif;
+  font-family: "Dekar", sans-serif;
   color: #1c3f95;
 
-  &:before{
-    content: '';
+  &:before {
+    content: "";
     position: absolute;
     width: 100%;
     height: 25%;
@@ -44,8 +44,8 @@ export const TitleContainer = styled.div`
     top: -15%;
   }
 
-  &:after{
-    content: '';
+  &:after {
+    content: "";
     position: absolute;
     width: 100%;
     height: 33%;
@@ -53,4 +53,111 @@ export const TitleContainer = styled.div`
     transform: rotate(2deg);
     bottom: -15%;
   }
-`
+`;
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+
+  h1 {
+    padding: 48px;
+    font-weight: bold;
+  }
+
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 30%;
+    height: 400px;
+    top: -80px;
+    margin-left: 16px;
+    background-color: white;
+    border-radius: 3%;
+  }
+
+  #fileImage {
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+  }
+`;
+
+export const Banner = styled.div`
+  width: 100%;
+  height: 250px;
+  display: flex;
+  background-color: gray;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Content = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: auto;
+
+  .text {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: justify;
+    font-size: 16px;
+
+    .title {
+      color: black;
+      font-size: 48px;
+      font-weight: bold;
+      font-family: Dekar, sans-serif;
+      margin-top: 16px;
+    }
+  }
+`;
+
+export const ContainerCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px;
+
+  @media only screen and (max-width: 810px) {
+    .cardDeck {
+      flex-direction: column;
+    }
+  }
+
+  .cardDeck {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 16px;
+
+    .item {
+      margin: 2rem;
+      align-self: flex-start;
+      text-align: justify;
+
+      li {
+        margin-bottom: 8px;
+        list-style-type: none;
+      }
+    }
+  }
+
+  .title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+`;

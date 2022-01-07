@@ -11,7 +11,6 @@ import {
   Home,
   AboutUs,
   Education,
-  Medio,
   Contact,
   Notice,
   NoticeList,
@@ -31,6 +30,7 @@ import { BannerCrud, Post } from "./pages/Admin"
 import logoCdbl from "./images/logo-cdbl.png";
 import { Helmet } from "react-helmet";
 import { KinderGarten } from "./pages/KinderGarten";
+import { HighSchool } from "./pages/Education/HighSchool";
 // import Manutencao from "./pages/Manutencao";
 // import { SuspenseWithPerf} from 'reactfire';
 
@@ -277,7 +277,7 @@ function App() {
                     <Header />
                     <Menu history={history} />
                   </div>
-                  <Medio history={history} {...props}></Medio>
+                  <HighSchool history={history} {...props}></HighSchool>
                   <Footer />
                 </>
               )}
