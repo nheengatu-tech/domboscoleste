@@ -103,6 +103,7 @@ export const Content = styled.div`
   align-items: flex-start;
   margin: auto;
 
+
   .text {
     width: 40%;
     height: 100%;
@@ -119,6 +120,16 @@ export const Content = styled.div`
       font-weight: bold;
       font-family: Dekar, sans-serif;
       margin-top: 16px;
+    }
+  }
+
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    .text {
+      width: 80%;
     }
   }
 `;
