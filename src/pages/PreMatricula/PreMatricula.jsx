@@ -1,7 +1,8 @@
 import React from "react";
+import './styles.css'
 
 const PreMatricula = () => {
-  return (
+  return (/*
     <div style={{background:'red'}}>
       <p>
         O Ensino Médio desenvolve suas atividades educativas integradas no Marco
@@ -23,6 +24,58 @@ const PreMatricula = () => {
         mão dupla, de forma interdisciplinar, propiciando ao educando uma
         aprendizagem preenchida de conceitos significativos.
       </p>
+    </div>*/
+    <div className="flex_row main">
+      {/*DIV BANNER*/}
+      <div className="flex_column banner">
+        BANNER
+      </div>
+
+      {/*DIV CONTENT*/}
+      <div className="flex_column content">
+        <h1 className="bold">Pré-Matrícula</h1>
+
+        <p>As matrículas estão abertas com desconto não cumulativo de 25% de desconto até o dia 18 de dezembro.
+          Todas as informações de pré-matrícula são necessárias para cadastramento do aluno e agendamento de visita feita pelo
+          pai ou responsável à escola.</p>
+
+
+        {/*DIV DROPITENS*/}
+        <div className="flex_row drop-itens">
+          <div className="test">
+            ▼
+          </div>
+          <p className="bold no-margin">Mensalidade</p>
+
+          <div className="test">
+            ▼
+          </div>
+          <p className="bold no-margin">
+            Documento para matrícula
+          </p>
+
+          <div className="test">
+            ▼
+          </div>
+          <p className="bold no-margin">
+            Informações curriculares
+          </p>
+
+        </div>
+
+
+        {/* DIV FORMULARIO */}
+        <div className="form-matricula">
+          <p>
+            Formulário de Pré-Matrícula
+          </p>
+          <br />
+          <p>
+            Google Forms
+          </p>
+        </div>
+
+      </div>
     </div>
   );
 };

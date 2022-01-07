@@ -70,7 +70,7 @@ const DropdownMenu = ({children}) => {
         <ul>
           <li><Link to="/ensino">Plano</Link></li>
           <li><Link to="/infantil">Educação Infantil</Link></li>
-          <li><Link to="/noticias">Ensino Fundamental</Link></li>
+          <li><Link to="/fundamental">Ensino Fundamental</Link></li>
           <li><Link to="/medio">Ensino Médio</Link></li> 
         </ul>
       </nav>
@@ -160,7 +160,7 @@ const MenuDesktop = (props) => {
               <Link to="/noticias">NOTICIAS</Link>
             </NavItem>
             <DropdownMenu>
-              <NavItem className={isSelected("ensino")}> 
+              <NavItem className={isSelected("ensino") || isSelected("infantil") || isSelected("medio") || isSelected("fundamental")}> 
                 {/* <Link to="/ensino">ENSINO</Link> */}
                 <div>ENSINO</div>
               </NavItem>
@@ -181,8 +181,8 @@ const MenuDesktop = (props) => {
               </span>
               {/* <Link to="/">Galeria</Link> */}
             </NavItem>
-            <NavItem className={isSelected("pre-matricula")}>
-              <Link to="/pre-matricula">PRÉ-MATRÍCULA</Link>
+            <NavItem className={isSelected("preMatricula")}>
+              <Link to="/preMatricula">PRÉ-MATRÍCULA</Link>
             </NavItem>
             <NavItem className={isSelected("fale-conosco")}>
               <Link to="/fale-conosco">FALE CONOSCO</Link>
