@@ -58,7 +58,6 @@ export const TitleContainer = styled.div`
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  margin: auto;
 
   h1 {
     padding: 48px;
@@ -71,8 +70,9 @@ export const Container = styled.div`
     align-items: center;
     flex-direction: column;
     position: relative;
-    width: 30%;
-    height: 400px;
+    width: 35%;
+    height: auto;
+    max-height: 350px;
     top: -80px;
     margin-left: 16px;
     background-color: white;
@@ -84,6 +84,18 @@ export const Container = styled.div`
     height: 100%;
     width: 100%;
   }
+
+  @media only screen and (max-width: 1000px) {
+    .image {
+      width: 50%;
+    }
+  }
+
+  @media only screen and (max-width: 840px) {
+    .image {
+      width: 70%;
+    }
+  }
 `;
 
 export const Banner = styled.div`
@@ -93,16 +105,28 @@ export const Banner = styled.div`
   background-color: gray;
   justify-content: center;
   align-items: center;
+  margin-top: 98px;
+
+  @media only screen and (max-width: 767px) {
+    margin-top: 70px;
+  }
+
+  @media only screen and (max-width: 750px) {
+    margin-top: 30px;
+  }
 `;
 
 export const Content = styled.div`
+  display: block;
+  margin: 0px 36px 36px 36px;
+`;
+
+export const ContainerText = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
-  margin: auto;
-
 
   .text {
     width: 40%;
