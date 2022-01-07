@@ -1,27 +1,22 @@
 import React from 'react'
 import { Card } from '../../components/Card'
-
+import './styles.css';
 
 const BasicEducation = () => {
     return (
-
-        <div style={{ display: "flex", flexDirection: "column", margin: "auto" }}>
-
+        <div className='flex_column' style={{ margin: "auto" }}>
             {/*DIV BANNER*/}
-            <div style={{ width: "100%", height: "250px", display: "flex", backgroundColor: "gray", justifyContent: "center", alignItems: "center" }}>
+            <div className='banner'>
                 <h1 style={{ color: "black" }}>BANNER</h1>
             </div>
 
             {/*DIV CONTÉUDO*/}
-            <div style={{ width: "100%", height: "", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "flex-start", margin: "auto" }}>
-                <div style={{ width: "40%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "flex-start", alignItems: "flex-start" }}>
-                    <div>
-                        <h4 style={{
-                            color: "#333399",
-                            fontSize: "20px",
-                            fontWeight: "bold",
-                            fontFamily: 'Dekar, sans-serif',
-                        }}>
+            <div className='flex_row' style={{ width: "100%", height: "", justifyContent: "center", alignItems: "flex-start", margin: "auto" }}>
+
+                {/*DIV CONTÉUDO TEXTO*/}
+                <div className='flex_column' style={{ width: "40%", height: "100%", justifyContent: "flex-start", alignItems: "flex-start" }}>
+                    <div className='body_notice'>
+                        <h4 className='text_title'>
                             Ensino Fundamental
                         </h4>
                         <div>
@@ -29,16 +24,16 @@ const BasicEducation = () => {
                                 A estrutura curricular do Ensino Fundamental é caracterizada por duas partes: a Comum e a Diversificada.
                             </p>
                             <p>
-                                A Parte Comum abrange as matérias que visam à aquisição de conhecimentos que integrem o aluno na cultura do seu tempo e na própria sociedade. 
+                                A Parte Comum abrange as matérias que visam à aquisição de conhecimentos que integrem o aluno na cultura do seu tempo e na própria sociedade.
                             </p>
                             <p>
                                 A Parte Diversificada reúne disciplinas que tem por objetivos complementar a educação do estudante com os conteúdos de interesse regional e local, assim como formação cristã.
                             </p>
                             <p>
-                                Compõem o currículo desta etapa da Educação Básica nas Escolas Salesianas na Amazônia, conforme área do conhecimento da Base Nacional Comum: o estudo da Língua Portuguesa, da Matemática, História, Geografia, Ciências, Arte, Educação Física. Parte Diversificada: Língua Inglesa e o Ensino Religioso que completam o rol dos componentes deste currículo. 
+                                Compõem o currículo desta etapa da Educação Básica nas Escolas Salesianas na Amazônia, conforme área do conhecimento da Base Nacional Comum: o estudo da Língua Portuguesa, da Matemática, História, Geografia, Ciências, Arte, Educação Física. Parte Diversificada: Língua Inglesa e o Ensino Religioso que completam o rol dos componentes deste currículo.
                             </p>
                             <p>
-                                Os temas: Ética, Orientação Sexual, Meio Ambiente, Saúde, Pluralidade Cultural, Orientação para o trabalho, Direitos e Deveres dos Cidadãos e Ordem Democrática permeiam transversalmente os componentes acima mencionados. 
+                                Os temas: Ética, Orientação Sexual, Meio Ambiente, Saúde, Pluralidade Cultural, Orientação para o trabalho, Direitos e Deveres dos Cidadãos e Ordem Democrática permeiam transversalmente os componentes acima mencionados.
                             </p>
                             <p>
                                 A transversalidade pressupõe um tratamento integrado da área e um compromisso das relações interpessoais e sociais com as que estão envolvidas nos temas, a fim de que haja uma coerência entre valores experimentados na vivência que a escola propicia aos alunos e a integração intelectual com tais valores.
@@ -47,7 +42,7 @@ const BasicEducation = () => {
                     </div>
 
                 </div>
-                <div style={{ marginLeft: "16px", position: "relative", top: "-80px", width: "30%", height: "400px", backgroundColor: "brown", display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
+                <div className='div_image'>
                     <h1 style={{ color: "black" }}>IMAGE</h1>
                 </div>
             </div>
@@ -56,9 +51,10 @@ const BasicEducation = () => {
             <h1 style={{ padding: "48px", fontWeight: "bold" }}>Áreas de Conhecimento</h1>
 
             {/*DIV CARD*/}
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", margin: "auto" }}>
+            <div className='flex_column' style={{ alignItems: "flex-start", margin: "auto" }}>
 
-                <div style={{ width: "100%", display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "center" }}>
+                {/*
+                <div className='flex_row' style={{ width: "100%", flexWrap: "wrap", justifyContent: "center" }}>
                     <Card title="Comunicação e Expressão">
                         <ul style={{ marginTop: "10px", alignSelf: "flex-start", textAlign: "start" }}>
                             <li>Oralidade</li>
@@ -106,7 +102,7 @@ const BasicEducation = () => {
                         </ul>
                     </Card>
 
-                </div>
+                </div> */}
             </div>
         </div>
 
