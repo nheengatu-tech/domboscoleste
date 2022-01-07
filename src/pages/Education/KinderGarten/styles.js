@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { tablet } from '../../_breakpoints'
+import { tablet } from '../../../_breakpoints'
 
 
 export const TitleContainer = styled.div`

@@ -8,7 +8,7 @@ import {
 } from "../styles";
 import cards from "./cards";
 import ElementCard from "../../../components/Card/Card";
-import banner from "../../../images/banner_matriculas_Prancheta-1.png";
+import banner from "../../../images/ensinomedio.jpeg";
 
 const HighSchool = () => {
   return (

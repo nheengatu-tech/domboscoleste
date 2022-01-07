@@ -8,9 +8,9 @@ import { Login } from "./Login";
 import { User } from "./User";
 import { TotemHome } from "./Totem";
 import { BasicEducation } from "./BasicEducation";
-import { KinderGarten } from "./KinderGarten";
 import Pastoral from "./Patoral";
 import HighSchool from "./Education/HighSchool/HighSchool";
+import KinderGarten from "./Education/KinderGarten/KinderGarten";
 
 export {
   Login,
@@ -24,6 +24,6 @@ export {
   TotemHome,
   Pastoral,
   BasicEducation,
-  KinderGarten,
   HighSchool,
+  KinderGarten,
 };
