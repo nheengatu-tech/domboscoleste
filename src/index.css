@@ -8,6 +8,11 @@ body {
   min-height: 90vh !important;
   height: auto !important;
 }
+@media only screen and (max-width: 1300px) {
+  body {
+    margin-top: 88px !important;
+  }
+}
 
 @media only screen and (max-width: 767px) {
   body {

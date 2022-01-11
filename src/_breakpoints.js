@@ -3,6 +3,8 @@ const breakpoints = {
   tablet: '768px',
   laptop: '960px',
   xlaptop: '1440px',
+  mheader: '1301px',
+  sheader: '1000px',
 }
 
-export const { mobile, tablet, laptop, xlaptop } = breakpoints
+export const { mobile, tablet, laptop, xlaptop, mheader, sheader } = breakpoints

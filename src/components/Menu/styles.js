@@ -1,30 +1,31 @@
-import styled from 'styled-components'
-import { tablet } from '../../_breakpoints'
+import styled from "styled-components";
+import { mheader } from "../../_breakpoints";
 
 const DesktopViewport = styled.div`
   display: none;
-  
-  > div {
+
+  div {
     display: flex;
     margin: auto;
   }
 
-  @media (min-width: ${tablet}) {
+  @media (min-width: ${mheader}) {
     display: flex;
   }
-`
+`;
 
 const MobileViewport = styled.div`
   display: flex;
-  @media (min-width: ${tablet}) {
+
+  @media (min-width: ${mheader}) {
     display: none;
   }
-`
+`;
 
 const MenuMobileItem = styled.div`
   display: flex;
   margin-bottom: 16px;
-  
+
   > svg {
     width: 32px;
     height: 32px;
@@ -44,7 +45,7 @@ const MenuMobileItem = styled.div`
       height: 32px;
       color: white;
     }
-  
+
     > span {
       color: white;
       font-size: large;
@@ -52,22 +53,12 @@ const MenuMobileItem = styled.div`
       // margin-left: 8px;
     }
 
-    color: white;
+    color: red;
     font-size: large;
     vertical-align: text-bottom;
     // margin-left: 8px;
   }
-`
-
-const Container = styled.div`
-  // background-color: #1c3f95;
-  background-image: linear-gradient( to right, rgb(12,51,159) 0%, rgb(0,101,185) 100%);
-  width: fit-content;
-  display: flex;
-  // height: 64px;
-  border-radius: 32px;
-  margin: auto 0;
-`
+`;
 
 const NavBar = styled.div`
   display: flex;
@@ -76,13 +67,17 @@ const NavBar = styled.div`
   justify-content: space-between;
 
   & .selectedNavItem {
-    background-image: linear-gradient( to right, rgb(12,51,159) 0%, rgb(0,101,185) 100%);;
+    background-image: linear-gradient(
+      to right,
+      rgb(12, 51, 159) 0%,
+      rgb(0, 101, 185) 100%
+    );
     transition: 0.2s;
     & * {
       color: #fff;
     }
   }
-`
+`;
 
 const NavItem = styled.div`
   padding: 16px;
@@ -102,14 +97,12 @@ const NavItem = styled.div`
     padding: 0 12px;
   }
   > a {
-    
     &:hover {
       cursor: pointer;
       color: #ffc20e;
     }
   }
-
-`
+`;
 
 const MenuHamburg = styled.span`
   float: left;
@@ -123,6 +116,21 @@ const MenuHamburg = styled.span`
     height: 32px;
     color: white;
   }
-`
+`;
+export const ContainerMobile = styled.div`
+  height: 50px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  background-color: #003094;
+`;
 
-export { MenuMobileItem, MenuHamburg, NavBar, NavItem, DesktopViewport, MobileViewport }
+export {
+  MenuMobileItem,
+  MenuHamburg,
+  NavBar,
+  NavItem,
+  DesktopViewport,
+  MobileViewport,
+};
