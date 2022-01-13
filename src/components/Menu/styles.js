@@ -33,7 +33,7 @@ const MenuMobileItem = styled.div`
   }
 
   > span {
-    color: white;
+    color: #fff;
     font-size: large;
     vertical-align: text-bottom;
     // margin-left: 8px;
@@ -44,6 +44,7 @@ const MenuMobileItem = styled.div`
       width: 32px;
       height: 32px;
       color: white;
+      margin-right: 8px;
     }
 
     > span {
@@ -105,7 +106,8 @@ const NavItem = styled.div`
 `;
 
 const MenuHamburg = styled.span`
-  float: left;
+  position: absolute;
+  margin: 10px 15px;
   display: flex;
   margin: auto auto auto 4px;
   cursor: pointer;
@@ -114,16 +116,17 @@ const MenuHamburg = styled.span`
   > svg {
     width: 32px;
     height: 32px;
-    color: white;
+    color: #000;
   }
 `;
 export const ContainerMobile = styled.div`
-  height: 50px;
+  height: 80px;
   width: 100%;
+  box-shadow: rgb(0 0 0 / 10%) 0px 2px 5px 3px;
   justify-content: flex-start;
   align-items: center;
   display: flex;
-  background-color: #003094;
+  background-color: #fff;
 `;
 
 export {

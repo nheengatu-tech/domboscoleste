@@ -36,8 +36,7 @@ const MenuMobile = (props) => {
                 flexDirection: "row",
                 alignItems: "center",
                 position: "relative",
-                right: "40%",
-              }}
+                margin: "auto",              }}
             >
               <img
                 style={{ maxWidth: "50px" }}
@@ -50,7 +49,7 @@ const MenuMobile = (props) => {
                   margin: "auto",
                   marginLeft: "16px",
                   fontSize: "1.6em",
-                  color: "#fff",
+                  color: "rgb(0, 48, 148)",
                   fontFamily: "Titillium Web, sans-serif",
                 }}
               >
@@ -61,7 +60,9 @@ const MenuMobile = (props) => {
           <div
             style={{
               height: "100vh",
-              width: "30%",
+              width: "50%",
+              position: "absolute",
+              minWidth: "300px",
               display: "flex",
               backgroundColor: "rgb(177, 19, 32)",
             }}
@@ -151,8 +152,7 @@ const MenuMobile = (props) => {
               flexDirection: "row",
               alignItems: "center",
               position: "relative",
-              right: "40%",
-            }}
+              margin: "auto",            }}
           >
             <img
               style={{ maxWidth: "50px" }}
@@ -165,7 +165,7 @@ const MenuMobile = (props) => {
                 margin: "auto",
                 marginLeft: "16px",
                 fontSize: "1.6em",
-                color: "#fff",
+                color: "rgb(0, 48, 148)",
                 fontFamily: "Titillium Web, sans-serif",
               }}
             >
