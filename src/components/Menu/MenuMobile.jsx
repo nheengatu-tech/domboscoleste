@@ -132,7 +132,7 @@ const MenuMobile = (props) => {
                     )
                   }
                 >
-                  <BiImages />
+                  <BiImages style={{marginRight: "8px",}}/>
                   <span>Galeria</span>
                 </MenuMobileItem>
               </div>
