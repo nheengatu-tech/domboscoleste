@@ -7,7 +7,7 @@ import { InstagramFeed } from '../../components/InstagramFeed'
 import Maps from '../../components/Maps';
 const Home = (props) => {
   return (
-    <div style={{flex:1, alignItems: 'center'}}>
+    <div style={{flex:1, alignItems: 'center', marginTop:'80px'}}>
       <CarouselList />
       <HotNews />
       <Partners />
